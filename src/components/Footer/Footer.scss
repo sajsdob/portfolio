@@ -12,18 +12,52 @@
     align-items: center;
     .menu {
         animation: fadeIn 0.5s linear;
+        margin-right: 18px;
         cursor: pointer;
         position: absolute;
         right: 10px;
-        .lines {
+        .line1,
+        .line2,
+        .line3 {
+            transition: 0.4s;
             width: 35px;
             height: 5px;
             background-color: whitesmoke;
             margin: 6px 0;
             border-radius: 2px;
         }
+        .line1out {
+            transition: 0.4s;
+            width: 35px;
+            height: 5px;
+            background-color: whitesmoke;
+            margin: 6px 0;
+            border-radius: 2px;
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .line2out {
+            transition: 0.4s;
+            width: 35px;
+            height: 5px;
+            background-color: whitesmoke;
+            margin: 6px 0;
+            border-radius: 2px;
+            opacity: 0;
+        }
+        .line3out {
+            transition: 0.4s;
+            width: 35px;
+            height: 5px;
+            background-color: whitesmoke;
+            margin: 6px 0;
+            border-radius: 2px;
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
     }
     .nav-list {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         animation: fadeIn 0.5s linear;
         width: 50%;
         position: relative;

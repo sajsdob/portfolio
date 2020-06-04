@@ -1,7 +1,18 @@
-html {
-    scroll-behavior: smooth;
+body { 
+    background-color: whitesmoke;
+}
+#about {
+    height: 100vh;
+
+}
+#projects {
+    height: 100vh;
+
 }
 
-* {
-    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+#education {
+    height: 100vh;
+}
+html {
+    scroll-behavior: smooth;
 }
