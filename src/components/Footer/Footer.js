@@ -15,23 +15,24 @@ class Footer extends Component {
   }
 
   hamburgerToggle = () => {
-     if(!this.state.sideBarOut) {
-       this.setState({
-        sidebarClassLineOne: 'line1out',
-        sidebarClassLineTwo: 'line2out',
-        sidebarClassLineThree: 'line3out',
-        sideBarOut: true,
-       })
-     }
-     else{
+    this.props.changeSideBarClass()
+    if(!this.state.sideBarOut) {
       this.setState({
-        sidebarClassLineOne: 'line1',
-        sidebarClassLineTwo: 'line2',
-        sidebarClassLineThree: 'line3',
-        sideBarOut: false,
-       })
-     }
-  }
+       sidebarClassLineOne: 'line1out',
+       sidebarClassLineTwo: 'line2out',
+       sidebarClassLineThree: 'line3out',
+       sideBarOut: true,
+      })
+    }
+    else{
+     this.setState({
+       sidebarClassLineOne: 'line1',
+       sidebarClassLineTwo: 'line2',
+       sidebarClassLineThree: 'line3',
+       sideBarOut: false,
+      })
+    }
+ }
 
 
 
@@ -44,11 +45,12 @@ class Footer extends Component {
           <li><a href='/#projects'>PROJECTS</a></li>
           <li><a href='/#education'>EDUCATION</a></li>
         </ol>
-        <div onClick = {this.hamburgerToggle} className='menu'>
+        <div onClick={this.hamburgerToggle} className='menu'>
           <div className={this.state.sidebarClassLineOne}></div>
           <div className={this.state.sidebarClassLineTwo}></div>
           <div className={this.state.sidebarClassLineThree}></div>
         </div>
+
       </nav>
     )
   }

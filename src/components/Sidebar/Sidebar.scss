@@ -1,0 +1,34 @@
+.sidebarIn {
+    background-color: red;
+    width: 60vw;
+    height: 100vh;
+    position: fixed;
+    right: -60vw;
+    z-index: 2;
+    transition: 0.4s;
+    transform: translateX(60vw);
+}
+.sidebarOut {
+    background-color: red;
+    width: 60vw;
+    height: 100vh;
+    position: fixed;
+    right: -60vw;
+    z-index: 2;
+    transition: 0.4s;
+    transform: translateX(-60vw);
+}
+
+
+@media only screen and (max-width: 960px) {
+    .nav-list {
+        display: none !important;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    .sidebarIn {
+        width: 0vw;
+    }
+}
