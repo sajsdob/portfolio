@@ -31,7 +31,7 @@ class App extends Component {
         <div className="App">
         <Footer changeSideBarClass = {this.changeSideBarClass}/>
         <Sidebar sidebarClass = {this.state.sidebarClass}/>
-        <div id='about'>fawfawfafawfawfawfnawli iawh oaiwhf awiofh awoifh ioawphfip a</div>
+        <div id='about'></div>
         <div id='projects'></div>
         <div id='education'></div>
      </div>

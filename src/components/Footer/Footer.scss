@@ -95,6 +95,9 @@
     .nav-list {
         display: none !important;
     }
+    .sidebarOut {
+        background-color: red;
+    }
 }
 
 /* Desktop Styles */
@@ -102,6 +105,9 @@
     .menu {
         display: none !important;
     }
+.sidebarOut {
+    background-color: black;
+}
 }
 
 @keyframes fadeIn {
