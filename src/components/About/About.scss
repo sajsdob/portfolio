@@ -1,0 +1,19 @@
+.contact-me {
+    border: black 2px solid;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 2px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    &:hover {
+        cursor: pointer;
+        background-color: black;
+    }
+    &:hover a {
+        color: white;
+    }
+    a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+    }
+}

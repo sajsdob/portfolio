@@ -16,32 +16,46 @@ class Footer extends Component {
 
   hamburgerToggle = () => {
     this.props.changeSideBarClass()
-    if(!this.state.sideBarOut) {
+    if (!this.state.sideBarOut) {
       this.setState({
-       sidebarClassLineOne: 'line1out',
-       sidebarClassLineTwo: 'line2out',
-       sidebarClassLineThree: 'line3out',
-       sideBarOut: true,
+        sidebarClassLineOne: 'line1out',
+        sidebarClassLineTwo: 'line2out',
+        sidebarClassLineThree: 'line3out',
+        sideBarOut: true,
       })
     }
-    else{
-     this.setState({
-       sidebarClassLineOne: 'line1',
-       sidebarClassLineTwo: 'line2',
-       sidebarClassLineThree: 'line3',
-       sideBarOut: false,
+    else {
+      this.setState({
+        sidebarClassLineOne: 'line1',
+        sidebarClassLineTwo: 'line2',
+        sidebarClassLineThree: 'line3',
+        sideBarOut: false,
       })
     }
- }
+  }
 
+  componentDidMount() {
+    this.prev = window.scrollY;
+    window.addEventListener('scroll', e => this.handleNavigation(e));
+  }
 
+  handleNavigation = (e) => {
+    const window = e.currentTarget;
+
+    if (this.prev > window.scrollY) {
+      document.getElementsByClassName("nav-bar")[0].style.top = "0";
+    } else if (this.prev < window.scrollY) {
+      document.getElementsByClassName("nav-bar")[0].style.top = "-11vh";
+    }
+    this.prev = window.scrollY;
+  };
 
 
   render() {
     return (
-      <nav className='nav-bar'>
+      <nav id='aboutme'  className='nav-bar'>
         <ol className='nav-list'>
-          <li><a href='/#about'>ABOUT ME</a></li>
+          <li><a href='/#aboutme'>ABOUT ME</a></li>
           <li><a href='/#projects'>PROJECTS</a></li>
           <li><a href='/#education'>EDUCATION</a></li>
         </ol>

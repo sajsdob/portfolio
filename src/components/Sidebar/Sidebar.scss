@@ -1,5 +1,5 @@
 .sidebarIn {
-    background-color: red;
+    background-color: black;
     width: 60vw;
     height: 100vh;
     position: fixed;
@@ -22,20 +22,17 @@
         height: 30px;
         a {
             font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: whitesmoke;
             text-decoration: none;
             &:hover {
                 cursor: pointer;
-                font-size: 1.6em;
+                font-size: 1.4em;
             }
-            
         }
     }
 }
 .sidebarOut {
-    display: flex;
-    justify-content: center;
     ul {
         padding: 0;
         display: flex;
@@ -49,17 +46,18 @@
         height: 30px;
         a {
             font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: whitesmoke;
             text-decoration: none;
             &:hover {
                 cursor: pointer;
-                font-size: 1.6em;
+                font-size: 1.4em;
             }
-            
         }
     }
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    background-color: black;
     width: 60vw;
     height: 100vh;
     position: fixed;
@@ -69,12 +67,9 @@
     transform: translateX(-60vw);
 }
 
-
 @media only screen and (max-width: 960px) {
-
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-
 }
