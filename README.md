@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LIVE VERSION in progress: https://xenodochial-mclean-a9ed8e.netlify.app/ 
 
 ## Available Scripts
 
