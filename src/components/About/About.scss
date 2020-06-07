@@ -9,19 +9,25 @@
         font-size: 60px;
         margin: 0;
     }
-    h3 {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 30px;
-        width: 46%;
-        margin: 0;
-        text-transform: uppercase;
-        margin-top: 10px;
+    // h3 {
+    //     font-family: "Times New Roman", Times, serif;
+    //     font-size: 30px;
+    //     width: 46%;
+    //     margin: 0;
+    //     text-transform: uppercase;
+    //     margin-top: 10px;
+    // }
+    .line {
+        height: 3px;
+        width: 47%;
+        background-color: black;
+        margin-top: 15px;
     }
     div {
-       p {
-        width: 46%;
-        font-family: monospace;
-       }
+        p {
+            width: 46%;
+            font-family: monospace;
+        }
     }
     .contact-me {
         margin-top: 13px;
@@ -43,6 +49,15 @@
             color: black;
         }
     }
+
+    img {
+        width: 20vw;
+        height: 18vw;
+        position: absolute;
+        right: 17vw;
+        top: 26vh;
+        z-index: -1;
+    }
 }
 
 // Mobile Styles
@@ -59,23 +74,32 @@
         h2 {
             font-size: 40px;
         }
-        h3 {
-            width: 100%;
-            margin: 30px auto;
-            font-size: 18px;
+        // h3 {
+        //     width: 100%;
+        //     margin: 30px auto;
+        //     font-size: 18px;
+        // }
+        .line {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            width: 60vw;
         }
         div {
             p {
-             margin: auto;
-             width: 100%;
+                margin: auto;
+                width: 100%;
             }
-         }
-         .contact-me {
-             font-size: 15px;
-             margin-top: 30px;
-             width: 30%;
-             line-height: 50px;
-         }
+        }
+        .contact-me {
+            font-size: 15px;
+            margin-top: 30px;
+            width: 30%;
+            line-height: 50px;
+        }
+        img {
+            display: none;
+        }
     }
 }
 
