@@ -2,6 +2,7 @@
     h1 {
         font-family: monospace;
         font-size: 20px;
+        margin-bottom: 10px;
     }
     h2 {
         font-family: "Times New Roman", Times, serif;
@@ -47,10 +48,12 @@
 // Mobile Styles
 @media only screen and (max-width: 960px) {
     .About {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
         margin-top: 10vh;
         h1 {
-            margin-bottom: 30px;
             font-size: 15px;
         }
         h2 {
@@ -64,11 +67,14 @@
         div {
             p {
              margin: auto;
-             width: 46%;
+             width: 100%;
             }
          }
          .contact-me {
+             font-size: 20px;
              margin-top: 30px;
+             width: 120px;
+             line-height: 50px;
          }
     }
 }
