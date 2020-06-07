@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <Footer changeSideBarClass={this.changeSideBarClass} />
-        <Sidebar sidebarClass={this.state.sidebarClass} />
+        <Sidebar changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass} />
         <div className='container'>
           <About />
           <div id='projects'></div>

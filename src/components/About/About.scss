@@ -1,19 +1,48 @@
-.contact-me {
-    border: black 2px solid;
-    display: inline-block;
-    line-height: 30px;
-    border-radius: 2px;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    &:hover {
-        cursor: pointer;
-        background-color: black;
+.About {
+    h1 {
+        
+        font-family: monospace;
+        font-size: 20px;
     }
-    &:hover a {
-        color: white;
+    h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 60px;
+        margin:  0;
     }
-    a {
-        padding: 10px;
-        text-decoration: none;
-        color: black;
+    .contact-me {
+        border: black 3px solid;
+        display: inline-block;
+        line-height: 30px;
+        border-radius: 2px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        &:hover {
+            cursor: pointer;
+            background-color: black;
+        }
+        &:hover a {
+            color: white;
+        }
+        a {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+// Mobile Styles
+@media only screen and (max-width: 960px) {
+    .About {
+        text-align: center;
+        margin-top: 10vh;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    .About {
+        text-align: left;
+        margin-top: 15vh;
+        margin-left: 3vw;
     }
 }

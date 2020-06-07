@@ -43,9 +43,9 @@ class Footer extends Component {
     const window = e.currentTarget;
 
     if (this.prev > window.scrollY) {
-      document.getElementsByClassName("nav-bar")[0].style.top = "0";
+      this.nav.style.top = "0";
     } else if (this.prev < window.scrollY) {
-      document.getElementsByClassName("nav-bar")[0].style.top = "-11vh";
+      this.nav.style.top = "-11vh";
     }
     this.prev = window.scrollY;
   };
@@ -53,7 +53,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <nav id='aboutme'  className='nav-bar'>
+      <nav ref= {(nav)=>{this.nav = nav}} id='aboutme'  className='nav-bar'>
         <ol className='nav-list'>
           <li><a href='/#aboutme'>ABOUT ME</a></li>
           <li><a href='/#projects'>PROJECTS</a></li>
