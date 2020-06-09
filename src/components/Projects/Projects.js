@@ -74,25 +74,24 @@ class Projects extends Component {
     render() {
         return (
             <div id='projects'>
-                <div className='project-list'>
-                    <div className='todo-list'></div>
-                    <div className='todo-list'></div>
-                    <div className='todo-list'></div>
-                </div>
-
-                <SimpleStorage parent={this} />
-                <div className='todo-container'>
-                    <Header
-                        handleKeyPress={this.handleKeyPress}
-                        addtolist={this.addtolist}
-                        changinginput={this.changinginput}
-                        userinput={this.state.userinput} />
-                    <Todo items={this.state.items}
-                        deleted={this.delete}
-                        addToDone={this.addToDone} />
-                    <Done deletedone={this.deletedone}
-                        done={this.state.done} />
-                </div>
+                    <div className='project-list'>
+                        <div className='todo-list'></div>
+                        <div className='todo-list'></div>
+                        <div className='todo-list'></div>
+                    </div>
+                    <SimpleStorage parent={this} />
+                    <div className='todo-container'>
+                        <Header
+                            handleKeyPress={this.handleKeyPress}
+                            addtolist={this.addtolist}
+                            changinginput={this.changinginput}
+                            userinput={this.state.userinput} />
+                        <Todo items={this.state.items}
+                            deleted={this.delete}
+                            addToDone={this.addToDone} />
+                        <Done deletedone={this.deletedone}
+                            done={this.state.done} />
+                    </div>
             </div>
         )
     }
