@@ -1,4 +1,4 @@
-LIVE VERSION in progress: https://xenodochial-mclean-a9ed8e.netlify.app/ 
+LIVE VERSION in progress: https://bialynickibirulo.com
 
 ## Available Scripts
 

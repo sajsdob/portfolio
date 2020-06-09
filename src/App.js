@@ -3,6 +3,7 @@ import './App.scss';
 import Footer from './components/Footer/Footer.js';
 import Sidebar from './components/Sidebar/Sidebar.js';
 import About from './components/About/About.js';
+import Projects from './components/Projects/Projects.js'
 
 
 class App extends Component {
@@ -71,7 +72,7 @@ class App extends Component {
         />
         <div className='container'>
           <About />
-          <div id='projects'></div>
+          <Projects />
           <div id='education'></div>
         </div>
       </div>
