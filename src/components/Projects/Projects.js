@@ -3,6 +3,7 @@ import SimpleStorage from "react-simple-storage";
 import Header from './header.js';
 import Todo from './todo.js';
 import Done from './done.js';
+import './todo.scss'
 
 
 class Projects extends Component {
