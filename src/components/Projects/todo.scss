@@ -1,3 +1,22 @@
+.project-list {
+    display: flex;
+    justify-content: space-around;
+}
+.todo-list {
+    margin: 50px auto;
+    height: 22vw;
+    width: 22vw;
+    background-color: red;
+    border-radius: 2.5px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    &:hover {
+        background-color: lighten($color: red, $amount: 15);
+        cursor: pointer;
+    }
+}
 .todo-container {
     margin-top: 40px;
     display: flex;
@@ -17,7 +36,7 @@ input {
     outline-width: 0;
     text-align: center;
     display: inline-block;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #ccc;
     float: left;
     font-family: monospace;
     width: 88%;
@@ -27,6 +46,25 @@ input {
     color: rgb(95, 94, 97);
     padding: 0 0 0 0;
     &::placeholder {
-      color: lightgrey;
+        color: lightgrey;
     }
-  }
+}
+
+.projects {
+    height: 100vh;
+}
+
+// Mobile Styles
+@media only screen and (max-width: 960px) {
+    .project-list {
+        flex-direction: column;
+    }
+    .todo-list {
+        height: 75vw;
+        width: 75vw;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+}

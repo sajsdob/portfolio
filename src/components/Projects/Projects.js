@@ -74,6 +74,12 @@ class Projects extends Component {
     render() {
         return (
             <div id='projects'>
+                <div className='project-list'>
+                    <div className='todo-list'></div>
+                    <div className='todo-list'></div>
+                    <div className='todo-list'></div>
+                </div>
+
                 <SimpleStorage parent={this} />
                 <div className='todo-container'>
                     <Header
