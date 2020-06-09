@@ -13,7 +13,7 @@ class Sidebar extends Component {
         return (
             <div className={this.props.sidebarClass}>
                 <ul className='sideBarList'>
-                    <li onClick={this.props.changeSideBarClass}><a href='/#aboutme'>ABOUT ME</a></li>
+                    <li onClick={this.props.changeSideBarClass}><a href='/#top'>ABOUT ME</a></li>
                     <li onClick={this.props.changeSideBarClass}><a href='/#projects'>PROJECTS</a></li>
                     <li onClick={this.props.changeSideBarClass}><a href='/#education'>EDUCATION</a></li>
                 </ul>

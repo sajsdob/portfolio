@@ -28,9 +28,9 @@ class Footer extends Component {
 
   render() {
     return (
-      <nav ref={(nav) => { this.nav = nav }} id='aboutme' className='nav-bar'>
+      <nav ref={(nav) => { this.nav = nav }} name='top' className='nav-bar'>
         <ol className='nav-list'>
-          <li><a href='/#aboutme'>ABOUT ME</a></li>
+          <li><a href='/#top'>ABOUT ME</a></li>
           <li><a href='/#projects'>PROJECTS</a></li>
           <li><a href='/#education'>EDUCATION</a></li>
         </ol>
