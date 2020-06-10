@@ -1,24 +1,68 @@
 .project-list {
+    position: relative;
     display: flex;
     justify-content: space-around;
+    z-index: 2;
 }
 .todo-list {
-    box-shadow: 0px 0px 24px -11px rgba(0,0,0,0.75);
+    // transition: 0.2s;
+    // &:hover { 
+    //     cursor: pointer;
+    //     background-color: white;
+    //     color: black;
+    //     transition: 0.2s;
+    // }
+
+
+    z-index: 3;
+    position: relative;
+    // box-shadow: 0px 0px 24px -11px rgba(0,0,0,0.75);
+
+
     margin: 50px auto;
     height: 22vw;
     width: 22vw;
-    background-color: red;
+    background-color: white;
     border-radius: 2.5px;
-    color: white;
+    color: black;
     text-align: center;
     line-height: 40px;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+
     &:hover {
-        background-color: lighten($color: red, $amount: 15);
+        // background-color: lighten($color: red, $amount: 15);
         cursor: pointer;
     }
+
+
+    h1 {
+        z-index: 4;
+        position: relative;
+        margin-top: 45%;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .background-color {
+        position: absolute;
+        background-color: red;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        z-index: 5;
+    }
+    &:hover .background-color {
+        height: 0;
+        transition: 0.3s;
+        z-index: 10;
+    }
+
+
 }
 .todo-container {
+    position: relative;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -53,7 +97,13 @@ input {
 
 .projects {
     height: 100vh;
+    position: relative;
+    z-index: 1;
 }
+
+
+
+// RESPONSIVE !
 
 // Mobile Styles
 @media only screen and (max-width: 960px) {
@@ -66,9 +116,9 @@ input {
     }
 }
 
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-}
+// /* Desktop Styles */
+// @media only screen and (min-width: 961px) {
+// }
 
 
 

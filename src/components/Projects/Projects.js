@@ -75,9 +75,9 @@ class Projects extends Component {
         return (
             <div id='projects'>
                     <div className='project-list'>
-                        <div className='todo-list'></div>
-                        <div className='todo-list'></div>
-                        <div className='todo-list'></div>
+                        <div className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
+                        <div className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1></div>
+                        <div className='todo-list'><div className='background-color'></div><h1>SPOTIFY APP</h1></div>
                     </div>
                     <SimpleStorage parent={this} />
                     <div className='todo-container'>
