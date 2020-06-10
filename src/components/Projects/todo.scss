@@ -69,3 +69,11 @@ input {
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
 }
+
+
+
+@media  screen and (max-height: 400px) {
+     .project-list {
+         margin-top: 100px;
+     }
+}
