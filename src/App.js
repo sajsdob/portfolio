@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Footer from './components/Footer/Footer.js';
 import Sidebar from './components/Sidebar/Sidebar.js';
 import About from './components/About/About.js';
-import Projects from './components/Projects/Projects.js'
+import Projects from './components/Projects/Projects.js';
+import Todoapp from './components/Todoapp/Todoapp.js';
 
 
 class App extends Component {
@@ -54,28 +57,38 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Footer changeSideBarClass={this.changeSideBarClass}
-          hamburgerToggle={this.hamburgerToggle}
-          sideBarOut={this.state.sideBarOut}
-          sidebarClassLineOne={this.state.sidebarClassLineOne}
-          sidebarClassLineTwo={this.state.sidebarClassLineTwo}
-          sidebarClassLineThree={this.state.sidebarClassLineThree}
-        />
-        <Sidebar
-          hamburgerToggle={this.hamburgerToggle}
-          sideBarOut={this.state.sideBarOut}
-          sidebarClassLineOne={this.state.sidebarClassLineOne}
-          sidebarClassLineTwo={this.state.sidebarClassLineTwo}
-          sidebarClassLineThree={this.state.sidebarClassLineThree}
-          changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass}
-        />
-        <div className='container'>
-          <About />
-          <Projects />
-          <div id='education'></div>
-        </div>
-      </div>
+      <Router>
+        
+          <div className="App">
+          
+            <Footer changeSideBarClass={this.changeSideBarClass}
+              hamburgerToggle={this.hamburgerToggle}
+              sideBarOut={this.state.sideBarOut}
+              sidebarClassLineOne={this.state.sidebarClassLineOne}
+              sidebarClassLineTwo={this.state.sidebarClassLineTwo}
+              sidebarClassLineThree={this.state.sidebarClassLineThree}
+            />
+            <Sidebar
+              hamburgerToggle={this.hamburgerToggle}
+              sideBarOut={this.state.sideBarOut}
+              sidebarClassLineOne={this.state.sidebarClassLineOne}
+              sidebarClassLineTwo={this.state.sidebarClassLineTwo}
+              sidebarClassLineThree={this.state.sidebarClassLineThree}
+              changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass}
+            />
+            <Switch>
+            <Route path='/' exact = {true}>
+            <div className='container'>
+              <About />
+              <Projects />
+              <div id='education'></div>
+            </div>
+            </Route>
+            <Route path='/Todoapp' component={Todoapp} />
+            </Switch>
+          </div>
+        
+      </Router>
     )
   }
 }
