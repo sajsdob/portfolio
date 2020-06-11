@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import SimpleStorage from "react-simple-storage";
 import Header from './header.js';
 import Todo from './todo.js';
 import Done from './done.js';
-import './todo.scss'
+import './todo.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+
+AOS.init({duration: 800});
 
 class Projects extends Component {
 
@@ -18,6 +22,7 @@ class Projects extends Component {
     }
 
     //METHODS
+
 
     changinginput = (input) => {
         this.setState({
@@ -53,6 +58,7 @@ class Projects extends Component {
         });
     }
 
+
     addToDone = (e) => {
         var donelist = this.state.done;
         donelist.push(e)
@@ -75,9 +81,9 @@ class Projects extends Component {
         return (
             <div id='projects'>
                     <div className='project-list'>
-                        <div className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
-                        <div className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1></div>
-                        <div className='todo-list'><div className='background-color'></div><h1>SPOTIFY APP</h1></div>
+                        <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
+                        <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1></div>
+                        <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>SPOTIFY APP</h1></div>
                     </div>
                     <SimpleStorage parent={this} />
                     <div className='todo-container'>

@@ -5,20 +5,9 @@
     z-index: 2;
 }
 .todo-list {
-    // transition: 0.2s;
-    // &:hover { 
-    //     cursor: pointer;
-    //     background-color: white;
-    //     color: black;
-    //     transition: 0.2s;
-    // }
-
-
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 3;
     position: relative;
-    // box-shadow: 0px 0px 24px -11px rgba(0,0,0,0.75);
-
-
     margin: 50px auto;
     height: 22vw;
     width: 22vw;
@@ -28,13 +17,10 @@
     text-align: center;
     line-height: 40px;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-
-
+    margin-bottom: 5px;
     &:hover {
-        // background-color: lighten($color: red, $amount: 15);
         cursor: pointer;
     }
-
 
     h1 {
         z-index: 4;
@@ -44,8 +30,8 @@
         width: 100%;
     }
 
-
     .background-color {
+        border-radius: 2.5px;
         position: absolute;
         background-color: red;
         width: 100%;
@@ -58,8 +44,6 @@
         transition: 0.3s;
         z-index: 10;
     }
-
-
 }
 .todo-container {
     position: relative;
@@ -101,11 +85,8 @@ input {
     z-index: 1;
 }
 
-
-
 // RESPONSIVE !
 
-// Mobile Styles
 @media only screen and (max-width: 960px) {
     .project-list {
         flex-direction: column;
@@ -116,14 +97,8 @@ input {
     }
 }
 
-// /* Desktop Styles */
-// @media only screen and (min-width: 961px) {
-// }
-
-
-
-@media  screen and (max-height: 400px) {
-     .project-list {
-         margin-top: 100px;
-     }
+@media screen and (max-height: 400px) {
+    .project-list {
+        margin-top: 100px;
+    }
 }

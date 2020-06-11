@@ -1,9 +1,9 @@
 .About {
-    height: 100vh;
+    height: 70vh;
     h1 {
         font-family: monospace;
         font-size: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     h2 {
         font-family: "Times New Roman", Times, serif;
@@ -15,7 +15,7 @@
         height: 3px;
         width: 47%;
         background-color: black;
-        margin-top: 15px;
+        margin-top: 25px;
         transition: 0.5s;
         &:hover {
             background-color: red;
@@ -25,12 +25,13 @@
     }
     div {
         p {
+            margin-top: 25px;
             width: 46%;
             font-family: monospace;
         }
     }
     .contact-me {
-        margin-top: 13px;
+        margin-top: 20px;
         border: black 3px solid;
         display: inline-block;
         line-height: 30px;
