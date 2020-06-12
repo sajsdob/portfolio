@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar.js';
 import About from './components/About/About.js';
 import Projects from './components/Projects/Projects.js';
 import Todoapp from './components/Todoapp/Todoapp.js';
+import Weatherapp from './components/Weatherapp/Weatherapp.js'
 
 
 class App extends Component {
@@ -85,6 +86,7 @@ class App extends Component {
             </div>
             </Route>
             <Route path='/Todoapp' component={Todoapp} />
+            <Route path='/Weatherapp' component={Weatherapp} />
             </Switch>
           </div>
         
