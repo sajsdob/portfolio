@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-around;
     z-index: 2;
+    a {
+        position: relative;
+        text-decoration: none;
+    }
 }
 .todo-list {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -25,7 +29,7 @@
     h1 {
         z-index: 4;
         position: relative;
-        margin-top: 45%;
+        top: 43%;
         text-align: center;
         width: 100%;
     }

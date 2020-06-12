@@ -7,11 +7,9 @@ constructor(props){
   super(props);
 }
   render(){
-    const {changeTheme, handleKeyPress, addtolist, changinginput, userinput} = this.props;
+    const {handleKeyPress, addtolist, changinginput, userinput} = this.props;
     return(
       <div  className = 'userinput'>
-        <div    className = 'changeTheme'
-                onClick={changeTheme}>CHANGE THEME</div>
         <input  onKeyPress={handleKeyPress}
                 placeholder='ENTER TASK'
                 onChange={(e)=>changinginput(e.target.value)}

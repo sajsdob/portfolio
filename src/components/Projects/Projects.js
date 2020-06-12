@@ -20,8 +20,12 @@ class Projects extends Component {
                         <Link to="/Todoapp">
                         <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
                         </Link>
+                        <Link to="/Todoapp">
                         <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1></div>
+                        </Link>
+                        <Link to="/Todoapp">
                         <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>SPOTIFY APP</h1></div>
+                        </Link>
                     </div>
             </div>
         )

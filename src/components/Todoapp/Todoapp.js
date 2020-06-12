@@ -3,7 +3,7 @@ import SimpleStorage from "react-simple-storage";
 import Header from './Header.js';
 import Todo from './Todo.js';
 import Done from './Done.js';
-
+import './Todo.scss'
 
 class Todoapp extends Component {
 
@@ -74,11 +74,10 @@ handleKeyPress = (event, ) => {
 
   render(){
     return(
-    <div id='/Todoapp'>
+    <div id='/Todoapp' className='Todoapp'>
     <SimpleStorage parent={this} />
       <div className='container'>
-          <Header changeTheme = {this.changeTheme}
-                  handleKeyPress = {this.handleKeyPress}
+          <Header handleKeyPress = {this.handleKeyPress}
                   addtolist = {this.addtolist}
                   changinginput = {this.changinginput}
                   userinput = {this.state.userinput}/>
