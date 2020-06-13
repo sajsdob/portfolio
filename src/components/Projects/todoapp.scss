@@ -1,5 +1,12 @@
+
+.myprojects {
+    padding-top: 12vh;
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
 .project-list {
-    margin-top: 100px;
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -13,7 +20,7 @@
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 3;
     position: relative;
-    margin: 50px auto;
+    margin: 0px auto;
     height: 22vw;
     width: 22vw;
     background-color: white;
@@ -22,7 +29,7 @@
     text-align: center;
     line-height: 40px;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     &:hover {
         cursor: pointer;
     }
@@ -84,22 +91,28 @@ input {
     }
 }
 
-.projects {
-    height: 100vh;
-    position: relative;
-    z-index: 1;
-}
+#projects {
+    margin-top: 140px;
+  }
 
 // RESPONSIVE !
 
 @media only screen and (max-width: 960px) {
+    #projects {
+        margin-top: 35px;
+      }
     .project-list {
         flex-direction: column;
-        margin-top: 0;
     }
     .todo-list {
         height: 75vw;
         width: 75vw;
+    }
+    .myprojects {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        padding-top: 12vh;
     }
 }
 
