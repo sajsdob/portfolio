@@ -1,4 +1,5 @@
 .project-list {
+    margin-top: 100px;
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -94,7 +95,7 @@ input {
 @media only screen and (max-width: 960px) {
     .project-list {
         flex-direction: column;
-        margin-top: 140px;
+        margin-top: 0;
     }
     .todo-list {
         height: 75vw;
@@ -103,15 +104,4 @@ input {
 }
 
 
-@media screen and (max-height: 400px) {
-    .project-list {
-        margin-top: 200px;
-    }
-}
-
-@media screen and (max-width: 960px) and (min-height: 600px ) { 
-    .project-list {
-        margin-top: 0px;
-    }
-} 
 
