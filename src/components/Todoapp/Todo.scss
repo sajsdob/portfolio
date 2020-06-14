@@ -81,13 +81,11 @@ button {
     }
 }
 
-.done, .todo {
-    color: red;
-}
 
 @media only screen and (max-width: 960px) {
     .tak {
         color: red;
+        font-weight: bold;
     }
 
     .userinput {
