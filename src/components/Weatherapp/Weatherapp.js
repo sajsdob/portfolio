@@ -7,11 +7,11 @@ var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
 
 function Weatherapp() {
     
-    function serachMovies () {
-        fetch(proxyUrl + targetUrl)
-        .then(res => res.json())
-        .then (weather => console.log(weather))
-    }
+    // function serachMovies () {
+    //     fetch(proxyUrl + targetUrl)
+    //     .then(res => res.json())
+    //     .then (weather => console.log(weather))
+    // }
 
     return <div id='/Weatherapp' className='Weatherapp'>
             <input type='text' className='search-city' placeholder='Enter City Name'></input>
