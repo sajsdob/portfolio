@@ -88,6 +88,7 @@ class App extends Component {
             <Route path='/Todoapp' component={Todoapp} />
             <Route path='/Weatherapp' component={Weatherapp} />
             </Switch>
+            <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
           </div>
         
       </Router>

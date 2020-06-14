@@ -93,6 +93,10 @@ input {
 
 #projects {
     margin-top: 140px;
+    &::after {
+        content: '';
+        display: block;
+    }
   }
 
 // RESPONSIVE !

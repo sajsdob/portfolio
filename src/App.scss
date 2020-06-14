@@ -2,7 +2,9 @@ body {
     background: whitesmoke;
 }
 
-
+#app {
+    min-height: 100%;
+}
 
 #education {
     height: 100vh;
@@ -13,6 +15,8 @@ html {
 .container { 
     width: 75%;
     margin: 0 auto;
+    overflow: auto;
+    
 }
 
 // Mobile Styles
@@ -29,3 +33,18 @@ html {
     }
 }
 
+.designed {
+    position: relative;
+    font-family: monospace;
+    font-size: 13px;
+    color: black;
+    width: 15%;
+    margin: 27px auto;
+    text-align: center;
+}
+
+@media only screen and (max-width: 960px) {
+    .designed {
+        width: 80%;
+    }
+}
