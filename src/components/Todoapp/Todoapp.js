@@ -66,7 +66,7 @@ addToDone=(e)=>{
 }
 
 handleKeyPress = (event, ) => {
-  if(event.key == 'Enter'){
+  if(event.key === 'Enter'){
     this.addtolist(this.state.userinput);
   }
 }
@@ -74,7 +74,7 @@ handleKeyPress = (event, ) => {
 
   render(){
     return(
-    <div id='/Todoapp' className='Todoapp'>
+    <div id='Todoapp' className='Todoapp'>
     <SimpleStorage parent={this} />
       <div className='container'>
           <Header handleKeyPress = {this.handleKeyPress}
