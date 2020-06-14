@@ -10,7 +10,7 @@ AOS.init({ duration: 800 });
 
 function Projects() {
     return <div id='projects'>
-        <p className='myprojects'>HERE ARE SOME THINGS I'VE BEEN WORKING ON:</p>
+        <h1 className='myprojects'>HERE ARE SOME THINGS I'VE BEEN WORKING ON:</h1>
         <div className='project-list'>
             <Link to="/Todoapp">
                 <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
