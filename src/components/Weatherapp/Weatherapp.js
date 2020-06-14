@@ -15,7 +15,7 @@ function Weatherapp() {
 
     return <div id='/Weatherapp' className='Weatherapp'>
             <input type='text' className='search-city' placeholder='Enter City Name'></input>
-            <button onClick={serachMovies}>SEARCH MOVIE</button>
+            <button>SEARCH MOVIE</button>
            </div>
 }
 
