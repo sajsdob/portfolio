@@ -7,7 +7,8 @@ import Sidebar from './components/Sidebar/Sidebar.js';
 import About from './components/About/About.js';
 import Projects from './components/Projects/Projects.js';
 import Todoapp from './components/Todoapp/Todoapp.js';
-import Weatherapp from './components/Weatherapp/Weatherapp.js'
+import Weatherapp from './components/Weatherapp/Weatherapp.js';
+import Skills from './components/Skills/Skills.js';
 
 
 class App extends Component {
@@ -60,7 +61,7 @@ class App extends Component {
     return (
       <Router>
         
-          <div className="App">
+          <div className='App'>
           
             <Footer changeSideBarClass={this.changeSideBarClass}
               hamburgerToggle={this.hamburgerToggle}
@@ -88,6 +89,7 @@ class App extends Component {
             <Route path='/Todoapp' component={Todoapp} />
             <Route path='/Weatherapp' component={Weatherapp} />
             </Switch>
+            <Skills />
             <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
           </div>
         

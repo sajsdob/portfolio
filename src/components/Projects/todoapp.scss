@@ -111,6 +111,19 @@ input {
     .todo-list {
         height: 75vw;
         width: 75vw;
+        background-color: red;
+        h1 {
+            color: whitesmoke;
+        }
+        .background-color {
+            border-radius: 2.5px;
+            position: absolute;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+            z-index: 5;
+        }
     }
     .myprojects {
         width: 70%;
@@ -119,6 +132,7 @@ input {
         padding-top: 12vh;
     }
 }
+
 
 
 
