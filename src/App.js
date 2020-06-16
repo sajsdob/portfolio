@@ -63,7 +63,7 @@ class App extends Component {
         
           <div className='App'>
           
-            <Footer changeSideBarClass={this.changeSideBarClass}
+            <Footer  changeSideBarClass={this.changeSideBarClass}
               hamburgerToggle={this.hamburgerToggle}
               sideBarOut={this.state.sideBarOut}
               sidebarClassLineOne={this.state.sidebarClassLineOne}

@@ -2,6 +2,7 @@ import './Footer.scss';
 import React, { Component } from 'react';
 
 
+
 class Footer extends Component {
 
   constructor(props) {
@@ -44,6 +45,7 @@ class Footer extends Component {
     )
   }
 }
+
 
 
 
