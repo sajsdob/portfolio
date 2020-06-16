@@ -1,4 +1,7 @@
 .Todoapp {
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
    margin-top: 15vh;
    display: flex;
    .container {
@@ -9,6 +12,8 @@
        margin-top: 70px;
 
        li {
+           font-weight: bold;
+           font-family: monospace;
            &:hover button {
                background-color: white;
            }
@@ -20,7 +25,7 @@
            }
            border: 2px solid;
            border-radius: 3px;
-           width: 40%;
+           width: 50%;
            overflow: auto;
            margin: 5px auto;
            padding: 10px;
@@ -86,6 +91,13 @@ button {
     .tak {
         color: red;
         font-weight: bold;
+    }
+    .Todoapp {
+        ul {
+            li {
+                width: 70%;
+            }
+        }
     }
 
     .userinput {
