@@ -1,6 +1,6 @@
 .Todoapp {
     h1 {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: Impacto, Impact, sans-serif;
     }
    margin-top: 15vh;
    display: flex;
@@ -73,6 +73,8 @@ button {
     width: 30%;
 }
 .addbutton {
+    font-weight: bold;
+    width: 40px;
     padding-top: 9px;
     margin-left: 10px;
     color: white;
@@ -81,7 +83,6 @@ button {
     padding-right: 10px;
     border-radius: 2px;
     &:hover {
-        font-weight: bold;
         cursor: pointer;
     }
 }
@@ -109,9 +110,9 @@ button {
         margin-right: auto;
     }
     .addbutton {
-        width: 10%;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        width: 8%;
+        padding-top: 7px;
+        padding-bottom: 7px;
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;

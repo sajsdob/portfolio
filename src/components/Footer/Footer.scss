@@ -78,7 +78,9 @@
                 font-size: 17px;
                 color: whitesmoke;
                 text-decoration: none;
+                transition: 0.15s;
                 &:hover {
+                    transition:  0.15s;
                     cursor: pointer;
                     font-size: 18px;
                 }
