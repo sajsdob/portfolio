@@ -24,16 +24,16 @@
 
 import React, { useState } from 'react';
 import './Weatherapp.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 
 
-AOS.init({ duration: 800 });
+// AOS.init({ duration: 800 });
 
 const api = {
-    key: "2bfdd7ade4a7269949294a30207a1c19",
-    base: "api.openweathermap.org/data/2.5/",
+    key: "3dbbfca50d3674cc4510970916791fb0",
+    base: "https://api.openweathermap.org/data/2.5/",
     proxyUrl: 'http://cors-anywhere.herokuapp.com/'
 }
 
@@ -45,7 +45,7 @@ function Weatherapp() {
 
     const searchCity = evt => {
         if (evt.key === "Enter") {
-            fetch(api.proxyUrl + `${api.base}weather?q=${link}&units=metric&APPID=${api.key}`)
+            fetch(`${api.base}weather?q=${link}&units=metric&APPID=${api.key}`)
                 .then(res => res.json())
                 .then(result => {
                     setWeatherinfo(result);
