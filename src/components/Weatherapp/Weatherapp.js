@@ -26,8 +26,8 @@
 
 import React, { useState } from 'react';
 import './Weatherapp.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 
 
@@ -70,7 +70,7 @@ function Weatherapp() {
 
     return (
         <div data-aos="slide-down"  className='app'>
-fkalfmawlkfaw
+awfwafawiawhfiuaew
 
         </div>
     );
