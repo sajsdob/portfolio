@@ -33,8 +33,8 @@ AOS.init({ duration: 800 });
 
 const api = {
     key: "2bfdd7ade4a7269949294a30207a1c19",
-    base: "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/",
-    proxyUrl: 'https://cors-anywhere.herokuapp.com/'
+    base: "api.openweathermap.org/data/2.5/",
+    proxyUrl: 'http://cors-anywhere.herokuapp.com/'
 }
 
 function Weatherapp() {
