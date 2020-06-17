@@ -7,7 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar.js';
 import About from './components/About/About.js';
 import Projects from './components/Projects/Projects.js';
 import Todoapp from './components/Todoapp/Todoapp.js';
-// import Weatherapp from './components/Weatherapp/Weatherapp.js';
+import Weatherapp from './components/Weatherapp/Weatherapp.js';
 import Skills from './components/Skills/Skills.js';
 
 
@@ -87,7 +87,7 @@ class App extends Component {
             </div>
             </Route>
             <Route path='/Todoapp' component={Todoapp} />
-            {/* <Route path='/Weatherapp' component={Weatherapp} /> */}
+            <Route path='/Weatherapp' component={Weatherapp} />
             </Switch>
             <Skills />
             <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
