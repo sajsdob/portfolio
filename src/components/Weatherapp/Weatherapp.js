@@ -1,58 +1,8 @@
-// import React, { useState } from 'react';
-// import './Weatherapp.scss';
-
-// var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-//     targetUrl = 'https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=2bfdd7ade4a7269949294a30207a1c19'
-
-
-// const  Weatherapp = () => {
-    
-//     function searchWeather () {
-//         fetch(proxyUrl + targetUrl)
-//         .then(res => res.json())
-//         .then (weather => console.log(weather.weather))
-//     }
-
-//     return <div id='/Weatherapp' className='Weatherapp'>
-//             <input type='text' className='search-city' placeholder='Enter City Name'></input>
-//             <button onClick={searchWeather}>SEARCH</button>
-//            </div>
-// }
-
-
-// export default Weatherapp
-
-
-
-// import React, { useState } from 'react';
-// import './Weatherapp.scss';
-
-// var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-//     targetUrl = 'https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=2bfdd7ade4a7269949294a30207a1c19'
-
-
-// const  Weatherapp = () => {
-    
-//     function searchWeather () {
-//         fetch(proxyUrl + targetUrl)
-//         .then(res => res.json())
-//         .then (weather => console.log(weather.weather))
-//     }
-
-//     return <div id='/Weatherapp' className='Weatherapp'>
-//             <input type='text' className='search-city' placeholder='Enter City Name'></input>
-//             <button onClick={searchWeather}>SEARCH</button>
-//            </div>
-// }
-
-
-// export default Weatherapp
-
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Weatherapp.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import location from '../../assets/location.png'
 
 
 
@@ -68,6 +18,11 @@ function Weatherapp() {
 
     const [weatherinfo, setWeatherinfo] = useState({});
     const [link, setLink] = useState('');
+    const [city, setCity] = useState('');
+
+    useEffect(()=> {
+        window.scrollTo(0, 0);
+    })
 
 
     const searchCity = evt => {
@@ -78,8 +33,35 @@ function Weatherapp() {
                     setWeatherinfo(result);
                     setLink('');
                 });
+                document.activeElement.blur();
         }
     }
+    const localWeather = () => {
+        if ('geolocation' in navigator) {
+           navigator.geolocation.getCurrentPosition(position => {
+            var lat = position.coords.latitude
+            var lon =position.coords.longitude
+            fetch(`https://eu1.locationiq.com/v1/reverse.php?key=c327a65f799172&lat=${lat}&lon=${lon}&format=json`)
+            .then(res => res.json())
+            .then(result => {
+                setCity(result.address.city)
+                return result.address.city
+            })
+            .then(city => {
+                fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
+                .then(res => res.json())
+                .then(result => {
+                    setWeatherinfo(result);
+                });
+                document.activeElement.blur();
+            })
+           })
+        } 
+        else {
+            alert('Your browser does not support geolocation!')
+        }
+    }
+    
 
     const currentDate = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -94,18 +76,20 @@ function Weatherapp() {
     }
 
     return (
-        <div data-aos="slide-down"  className='app'>
+        <div  data-aos="slide-down"  className='app'>
             <main>
                 <div className="search-box">
                     <input
                         type="text"
                         className="search-bar"
-                        placeholder="Search..."
+                        placeholder="Enter City Name"
                         onChange={e => setLink(e.target.value)}
                         value={link}
                         onKeyPress={searchCity}
                     />
+                       <img onClick={localWeather} src={location}/>
                 </div>
+                
                 {(typeof weatherinfo.main != "undefined") ? (
                     <div>
                         <div className="location-box">
@@ -126,3 +110,6 @@ function Weatherapp() {
 }
 
 export default Weatherapp;
+
+
+    

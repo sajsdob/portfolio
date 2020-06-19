@@ -10,7 +10,7 @@ class Header extends Component {
     const { handleKeyPress, addtolist, changinginput, userinput } = this.props;
     return (
       <div className='userinput'>
-        <input
+        <input 
           className='textinput'
           onKeyPress={handleKeyPress}
           placeholder='ENTER TASK'

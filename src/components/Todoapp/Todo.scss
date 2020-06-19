@@ -1,13 +1,13 @@
-.Todoapp {
+
+   .todo-app {
+       min-height: 80vh;
+       margin-top: 45px;
     h1 {
         font-family: Impacto, Impact, sans-serif;
     }
-   margin-top: 15vh;
-   display: flex;
-   .container {
-       min-height: 70vh;
-   }
    ul {
+       margin-left: auto;
+       margin-left: auto;
        text-align: center;
        margin-top: 70px;
 
@@ -33,7 +33,6 @@
            background-color: whitesmoke;
        }
    }
-}
 
 span {
     color: red;
@@ -87,29 +86,26 @@ button {
     }
 }
 
+   }
+
 
 @media only screen and (max-width: 960px) {
-    .tak {
-        color: red;
-        font-weight: bold;
-    }
-    .Todoapp {
+  
+    .todo-app  {
         ul {
             li {
                 width: 70%;
+                .tak {
+                    color: red;
+                    font-weight: bold;
+                }
             }
         }
     }
 
     .userinput {
       flex-direction: column;
-    }
-    .textinput {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .addbutton {
+      .addbutton {
         width: 8%;
         padding-top: 7px;
         padding-bottom: 7px;
@@ -118,8 +114,15 @@ button {
         margin-right: auto;
         font-weight: bolder;
     }
+    .textinput {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    }
 }
 
 .done h1 {
   font-family: monospace;
 }
+

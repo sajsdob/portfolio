@@ -24,7 +24,6 @@ class App extends Component {
     }
   }
 
-
   changeSideBarClass = () => {
     if (!this.state.sideBarOut) {
       this.setState({
@@ -60,39 +59,40 @@ class App extends Component {
   render() {
     return (
       <Router>
-        
-          <div className='App'>
-          
-            <Footer  changeSideBarClass={this.changeSideBarClass}
-              hamburgerToggle={this.hamburgerToggle}
-              sideBarOut={this.state.sideBarOut}
-              sidebarClassLineOne={this.state.sidebarClassLineOne}
-              sidebarClassLineTwo={this.state.sidebarClassLineTwo}
-              sidebarClassLineThree={this.state.sidebarClassLineThree}
-            />
-            <Sidebar
-              hamburgerToggle={this.hamburgerToggle}
-              sideBarOut={this.state.sideBarOut}
-              sidebarClassLineOne={this.state.sidebarClassLineOne}
-              sidebarClassLineTwo={this.state.sidebarClassLineTwo}
-              sidebarClassLineThree={this.state.sidebarClassLineThree}
-              changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass}
-            />
-            <Switch>
-            <Route path='/' exact = {true}>
-            <div className='container'>
-              <About />
-              <Projects />
-              <div id='education'></div>
-            </div>
+
+        <div className='App'>
+          <Footer changeSideBarClass={this.changeSideBarClass}
+            hamburgerToggle={this.hamburgerToggle}
+            sideBarOut={this.state.sideBarOut}
+            sidebarClassLineOne={this.state.sidebarClassLineOne}
+            sidebarClassLineTwo={this.state.sidebarClassLineTwo}
+            sidebarClassLineThree={this.state.sidebarClassLineThree}
+          />
+          <Sidebar
+             hamburgerToggle={this.hamburgerToggle}
+            sideBarOut={this.state.sideBarOut}
+            sidebarClassLineOne={this.state.sidebarClassLineOne}
+            sidebarClassLineTwo={this.state.sidebarClassLineTwo}
+            sidebarClassLineThree={this.state.sidebarClassLineThree}
+            changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass}
+          />
+          <div className='container'>
+          <Switch>
+            <Route path='/' exact={true}>
+              <div className='main'>
+                <About />
+                <Projects />
+                <div id='education'></div>
+              </div>
             </Route>
             <Route path='/Todoapp' component={Todoapp} />
             <Route path='/Weatherapp' component={Weatherapp} />
-            </Switch>
-            <Skills />
-            <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
+          </Switch>
           </div>
-        
+          <Skills />
+          <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
+        </div>
+
       </Router>
     )
   }

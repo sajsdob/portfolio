@@ -10,11 +10,6 @@ import csslogo from '../../assets/csslogo.png';
 
 function Skills() {
 
-    // function serachMovies () {
-    //     fetch(proxyUrl + targetUrl)
-    //     .then(res => res.json())
-    //     .then (weather => console.log(weather))
-    // }
 
     return <div id='/Skills' className='Skills'>
         <img alt='csslogo' className='csslogo' src={csslogo} />
