@@ -22,10 +22,6 @@ class Todoapp extends Component {
 
   //METHODS
 
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
-
   changinginput = (input) => {
     this.setState({
       userinput: input

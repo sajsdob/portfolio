@@ -19,11 +19,9 @@ function Weatherapp() {
     const [weatherinfo, setWeatherinfo] = useState({});
     const [link, setLink] = useState('');
     const [city, setCity] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    useEffect(()=> {
-        window.scrollTo(0, 0);
-    })
-
+  
 
     const searchCity = evt => {
         if (evt.key === "Enter") {
@@ -33,35 +31,37 @@ function Weatherapp() {
                     setWeatherinfo(result);
                     setLink('');
                 });
-                document.activeElement.blur();
+            document.activeElement.blur();
         }
     }
     const localWeather = () => {
         if ('geolocation' in navigator) {
-           navigator.geolocation.getCurrentPosition(position => {
-            var lat = position.coords.latitude
-            var lon =position.coords.longitude
-            fetch(`https://eu1.locationiq.com/v1/reverse.php?key=c327a65f799172&lat=${lat}&lon=${lon}&format=json`)
-            .then(res => res.json())
-            .then(result => {
-                setCity(result.address.city)
-                return result.address.city
+            setLoading(true)
+            navigator.geolocation.getCurrentPosition(position => {
+                const lat = position.coords.latitude
+                const lon = position.coords.longitude
+                fetch(`https://eu1.locationiq.com/v1/reverse.php?key=c327a65f799172&lat=${lat}&lon=${lon}&format=json`)
+                    .then(res => res.json())
+                    .then(result => {
+                        setCity(result.address.city)
+                        return result.address.city
+                    })
+                    .then(city => {
+                        fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
+                            .then(res => res.json())
+                            .then(result => {
+                                setLoading(false)
+                                setWeatherinfo(result);
+                            });
+                        document.activeElement.blur();
+                    })
             })
-            .then(city => {
-                fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
-                .then(res => res.json())
-                .then(result => {
-                    setWeatherinfo(result);
-                });
-                document.activeElement.blur();
-            })
-           })
-        } 
+        }
         else {
             alert('Your browser does not support geolocation!')
         }
     }
-    
+
 
     const currentDate = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -76,7 +76,7 @@ function Weatherapp() {
     }
 
     return (
-        <div  data-aos="slide-down"  className='app'>
+        <div data-aos="slide-down" className='app'>
             <main>
                 <div className="search-box">
                     <input
@@ -87,9 +87,9 @@ function Weatherapp() {
                         value={link}
                         onKeyPress={searchCity}
                     />
-                       <img onClick={localWeather} src={location}/>
+                    <img onClick={localWeather} src={location} />
                 </div>
-                
+
                 {(typeof weatherinfo.main != "undefined") ? (
                     <div>
                         <div className="location-box">
@@ -104,6 +104,9 @@ function Weatherapp() {
                         </div>
                     </div>
                 ) : ('')}
+                {loading ? (
+                    <div className="lds-facebook"><div></div><div></div><div></div></div>
+                ) : ('')}
             </main>
         </div>
     );
@@ -112,4 +115,4 @@ function Weatherapp() {
 export default Weatherapp;
 
 
-    
+

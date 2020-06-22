@@ -9,6 +9,7 @@ import Projects from './components/Projects/Projects.js';
 import Todoapp from './components/Todoapp/Todoapp.js';
 import Weatherapp from './components/Weatherapp/Weatherapp.js';
 import Skills from './components/Skills/Skills.js';
+import Experience from './components/Experience/Experience.js'
 
 
 class App extends Component {
@@ -20,7 +21,8 @@ class App extends Component {
       sideBarOut: false,
       sidebarClassLineOne: 'line1',
       sidebarClassLineTwo: 'line2',
-      sidebarClassLineThree: 'line3'
+      sidebarClassLineThree: 'line3',
+      margin: 'one'
     }
   }
 
@@ -56,6 +58,8 @@ class App extends Component {
     }
   }
 
+ 
+
   render() {
     return (
       <Router>
@@ -69,7 +73,7 @@ class App extends Component {
             sidebarClassLineThree={this.state.sidebarClassLineThree}
           />
           <Sidebar
-             hamburgerToggle={this.hamburgerToggle}
+            hamburgerToggle={this.hamburgerToggle}
             sideBarOut={this.state.sideBarOut}
             sidebarClassLineOne={this.state.sidebarClassLineOne}
             sidebarClassLineTwo={this.state.sidebarClassLineTwo}
@@ -77,17 +81,17 @@ class App extends Component {
             changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass}
           />
           <div className='container'>
-          <Switch>
-            <Route path='/' exact={true}>
-              <div className='main'>
-                <About />
-                <Projects />
-                <div id='education'></div>
-              </div>
-            </Route>
-            <Route path='/Todoapp' component={Todoapp} />
-            <Route path='/Weatherapp' component={Weatherapp} />
-          </Switch>
+            <Switch>
+              <Route path='/' exact={true}>
+                <div className='main'>
+                  <About />
+                  <Projects />
+                  <Experience />
+                </div>
+              </Route>
+              <Route path='/Todoapp' component={Todoapp} />
+              <Route path='/Weatherapp' component={Weatherapp} />
+            </Switch>
           </div>
           <Skills />
           <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>

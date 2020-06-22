@@ -1,0 +1,89 @@
+.skill-container {
+    width: 75%;
+    margin: 250px auto;
+
+    ul li {
+        display: inline-block;
+        width: 25%;
+        padding: 0.75rem 0;
+        text-decoration: none;
+        color: #333;
+        text-align: center;
+        font-family: monospace;
+        font-size: 20px;
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+            color: red;
+        }
+        &:target {
+            color: red;
+        }
+    }
+
+    ul {
+        width: 75%;
+        margin: 30px auto;
+    }
+
+
+    .long {
+        background: lightgrey;
+        position: relative;
+        bottom: 11px;
+        height: 0.1rem;
+        border: none;
+        z-index: -1;
+    }
+}
+
+
+.one {
+    height: 0.25rem;
+    width: 25%;
+    margin: 0;
+    background: red;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 2px;
+    margin-left: 0;
+
+}
+.two {
+    height: 0.25rem;
+    width: 25%;
+    margin: 0;
+    background: red;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 2px;
+    margin-left: 25%;
+
+}
+
+.three {
+    height: 0.25rem;
+    width: 25%;
+    margin: 0;
+    background: red;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 2px;
+    margin-left: 50%;
+}
+.four {
+    height: 0.25rem;
+    width: 25%;
+    margin: 0;
+    background: red;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 2px;
+    margin-left: 75%;
+}
+
+@media only screen and (max-width: 960px) {
+    .skill-container {
+        width: 100vw; 
+    }
+}
