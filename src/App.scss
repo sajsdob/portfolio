@@ -4,6 +4,7 @@ body {
 
 #app {
     min-height: 100%;
+    
 }
 
 #education {
@@ -16,6 +17,7 @@ html {
     width: 75%;
     margin: 0 auto;
     overflow: auto;
+    
 }
 
 .skilllist {
@@ -59,3 +61,12 @@ html {
     }
 }
 
+
+
+@media only screen and (max-width: 768px) {
+    .demo {
+        .main-title {
+            font-size: 3em;
+        }
+    }
+}

@@ -4,6 +4,7 @@
     font-family: monospace;
     font-size: 20px;
     margin-bottom: 40px;
+    z-index: 4;
 }
 .project-list {
     position: relative;
@@ -95,6 +96,7 @@ input {
 
 #projects {
     margin-top: 140px;
+
     &::after {
         content: "";
         display: block;

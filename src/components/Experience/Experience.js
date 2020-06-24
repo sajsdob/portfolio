@@ -1,48 +1,37 @@
-
-
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Experience.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init({ duration: 900 });
 
-class Experience extends Component {
+const Experience = () => {
+    const [margin, setMargin] = useState('one');
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      margin: 'one'
+    const changeMargin = (e) => {
+        let margin = e.target.getAttribute('value')
+        setMargin(margin)
     }
-  }
 
-  //METHODS
-
-  changinginput = (input) => {
-    this.setState({
-      userinput: input
-    })
-  };
-
-  changeMargin = (e) => {
-    let margin = e.target.getAttribute('value')
-    this.setState({
-      margin: margin
-    })
-  }
-  
-
-  render() {
     return (
-<div className='skill-container' id='education'>
-<ul>
-  <li onClick={this.changeMargin} value='one'  >One</li>
-  <li onClick={this.changeMargin} value='two'  >Two</li>
-  <li onClick={this.changeMargin} value='three' >Three</li>
-  <li onClick={this.changeMargin} value='four' >Four</li>
-  <hr className={this.state.margin} />
-  <hr className='long' />
-</ul>
-</div>
+        <div className='skill-container' id='education'>
+            <h2>HERE IS MY JOB EXPIERIENCE SO FAR:</h2>
+            <ul data-aos='fade-in'>
+                <li onClick={changeMargin} value='one'  >ACI <br/> Europe</li>
+                <li onClick={changeMargin} value='two'  >Skateaholic Apparel</li>
+                <li onClick={changeMargin} value='three' >Frosch <br/> Media</li>
+                <li onClick={changeMargin} value='four' >Alphanumeric Systems</li>
+                <hr className={margin} />
+                <hr className='long' />
+            </ul>
+            <div>
+            <h3 data-aos-delay='300' data-aos='fade-up'>Sales Delegate Executive</h3>
+            <h1 data-aos-delay='400' data-aos='fade-up'>2013-2014</h1>
+            </div>
+
+        </div>
     )
-  }
+
 }
 
 export default Experience
