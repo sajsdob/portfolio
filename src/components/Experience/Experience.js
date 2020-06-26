@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Experience.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ExperienceJson from './Experience.json';
+import link from '../../assets/link.png';
 
 AOS.init({ duration: 900 });
 
@@ -10,23 +12,25 @@ const Experience = () => {
 
     const changeMargin = (e) => {
         let margin = e.target.getAttribute('value')
+
         setMargin(margin)
     }
 
     return (
-        <div className='skill-container' id='education'>
-            <h2>HERE IS MY JOB EXPIERIENCE SO FAR:</h2>
-            <ul data-aos='fade-in'>
-                <li onClick={changeMargin} value='one'  >ACI <br/> Europe</li>
-                <li onClick={changeMargin} value='two'  >Skateaholic Apparel</li>
-                <li onClick={changeMargin} value='three' >Frosch <br/> Media</li>
-                <li onClick={changeMargin} value='four' >Alphanumeric Systems</li>
+        <div className='skill-container' id='experience'>
+            <h2>WHERE I'VE WORKED:</h2>
+            <ul>
+                <li onClick={changeMargin} value='one'>2013<br />2014</li>
+                <li onClick={changeMargin} value='two'>2014<br />2016</li>
+                <li onClick={changeMargin} value='three'>2016<br />2018</li>
+                <li onClick={changeMargin} value='four'>2019<br />2020</li>
                 <hr className={margin} />
                 <hr className='long' />
             </ul>
-            <div>
-            <h3 data-aos-delay='300' data-aos='fade-up'>Sales Delegate Executive</h3>
-            <h1 data-aos-delay='400' data-aos='fade-up'>2013-2014</h1>
+            <div className='jobinfo'>
+                <h3>{ExperienceJson[margin].position}</h3>
+                <h4 data-aos='slide-up'>{ExperienceJson[margin].company}</h4>
+                {/* <img alt='link' className='link' src={link} /> */}
             </div>
 
         </div>

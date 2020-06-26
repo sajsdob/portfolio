@@ -1,13 +1,13 @@
-body {
+
+.body {
     background: whitesmoke;
 }
 
 #app {
     min-height: 100%;
-    
 }
 
-#education {
+#experience {
     height: 100vh;
 }
 html {
@@ -17,7 +17,6 @@ html {
     width: 75%;
     margin: 0 auto;
     overflow: auto;
-    
 }
 
 .skilllist {
@@ -56,12 +55,13 @@ html {
 }
 
 @media only screen and (max-width: 960px) {
+    .email, .social {
+        display: none;
+    }
     .designed {
         width: 80%;
     }
 }
-
-
 
 @media only screen and (max-width: 768px) {
     .demo {

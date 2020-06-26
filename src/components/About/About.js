@@ -9,13 +9,13 @@ AOS.init({ duration: 900 });
 
 class About extends Component {
 
-    //   constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //       sidebarClass: 'sidebarIn'
-    //     }
-    //   }
+      constructor(props) {
+        super(props);
+      }
 
+    componentDidMount() {
+     this.props.hideSide()
+    }
 
 
     render() {

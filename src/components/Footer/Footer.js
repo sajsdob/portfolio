@@ -33,7 +33,7 @@ class Footer extends Component {
         <ol className='nav-list'>
           <li><a href='/#top'>ABOUT ME</a></li>
           <li><a href='/#projects'>PROJECTS</a></li>
-          <li><a href='/#education'>EDUCATION</a></li>
+          <li><a href='/#experience'>EXPERIENCE</a></li>
         </ol>
         <div onClick={this.props.changeSideBarClass} className='menu'>
           <div className={this.props.sidebarClassLineOne}></div>

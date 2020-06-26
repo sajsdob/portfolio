@@ -16,13 +16,13 @@ const api = {
 
 function Weatherapp() {
 
+
     const [weatherinfo, setWeatherinfo] = useState({});
     const [link, setLink] = useState('');
     const [city, setCity] = useState('');
     const [loading, setLoading] = useState(false);
 
-  
-
+    
     const searchCity = evt => {
         if (evt.key === "Enter") {
             fetch(`${api.base}weather?q=${link}&units=metric&APPID=${api.key}`)

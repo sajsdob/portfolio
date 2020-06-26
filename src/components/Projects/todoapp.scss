@@ -6,6 +6,14 @@
     margin-bottom: 40px;
     z-index: 4;
 }
+.sepLine {
+    width: 74%;
+    height: 3px;
+    background: black;
+    margin: 2px auto;
+    display: none;
+    border-radius: 4px;
+}
 .project-list {
     position: relative;
     display: flex;
@@ -28,7 +36,7 @@
     color: black;
     text-align: center;
     line-height: 40px;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impacto, Impact, sans-serif;
     margin-bottom: 20px;
     &:hover {
         cursor: pointer;
@@ -67,9 +75,6 @@
     flex-direction: column;
     align-items: center;
 }
-.addbutton {
-    text-align: center;
-}
 ul {
     padding-left: 0;
 }
@@ -106,6 +111,9 @@ input {
 // RESPONSIVE !
 
 @media only screen and (max-width: 960px) {
+    .sepLine {
+      display: block;
+    }
     #projects {
         margin-top: 35px;
     }
@@ -141,3 +149,4 @@ input {
         padding-top: 12vh;
     }
 }
+

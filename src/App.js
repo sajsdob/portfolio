@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useLocation } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import './App.scss';
@@ -9,7 +9,9 @@ import Projects from './components/Projects/Projects.js';
 import Todoapp from './components/Todoapp/Todoapp.js';
 import Weatherapp from './components/Weatherapp/Weatherapp.js';
 import Skills from './components/Skills/Skills.js';
-import Experience from './components/Experience/Experience.js'
+import Experience from './components/Experience/Experience.js';
+import Email from './components/Email/Email.js';
+import Social from './components/Social/Social.js';
 
 
 class App extends Component {
@@ -25,6 +27,7 @@ class App extends Component {
       margin: 'one'
     }
   }
+
 
   changeSideBarClass = () => {
     if (!this.state.sideBarOut) {
@@ -58,12 +61,28 @@ class App extends Component {
     }
   }
 
- 
+  hideSide = () => {
+    if (this.state.sidebarClass === 'sidebarOut') {
+      this.setState({
+        sidebarClass: 'sidebarIn',
+        sidebarClassLineOne: 'line1',
+        sidebarClassLineTwo: 'line2',
+        sidebarClassLineThree: 'line3',
+        sideBarOut: false,
+      })
+      document.body.style.overflow = "visible"
+    }
+  }
+
+  componentDidMount () {
+    alert('NOTE that this website is still under development. Feel Free to check whats already been done though :)')
+  }
+
+
 
   render() {
     return (
       <Router>
-
         <div className='App'>
           <Footer changeSideBarClass={this.changeSideBarClass}
             hamburgerToggle={this.hamburgerToggle}
@@ -84,7 +103,7 @@ class App extends Component {
             <Switch>
               <Route path='/' exact={true}>
                 <div className='main'>
-                  <About />
+                  <About hideSide={this.hideSide} sidebarClass={this.state.sidebarClass} />
                   <Projects />
                   <Experience />
                 </div>
@@ -95,8 +114,9 @@ class App extends Component {
           </div>
           <Skills />
           <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
+          <Email />
+          <Social />
         </div>
-
       </Router>
     )
   }

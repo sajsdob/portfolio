@@ -73,7 +73,6 @@ class Todoapp extends Component {
   handleKeyPress = (event, ) => {
     if (event.key === 'Enter') {
       this.addtolist(this.state.userinput) 
-      // document.activeElement.blur();
     }
   }
 
