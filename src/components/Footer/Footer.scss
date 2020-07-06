@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@800&display=swap');
 .nav-bar {
     box-shadow: 0px 7px 23px -13px rgba(0,0,0,0.76);
     transition: top 0.3s;
@@ -10,6 +11,8 @@
     display: flex;
     align-items: center;
     z-index: 6;
+    display: flex;
+    align-items: center;
     .menu {
         z-index: 5;
         animation: fadeIn 0.5s linear;

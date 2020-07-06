@@ -40,7 +40,6 @@ class Footer extends Component {
           <div className={this.props.sidebarClassLineTwo}></div>
           <div className={this.props.sidebarClassLineThree}></div>
         </div>
-
       </nav>
     )
   }

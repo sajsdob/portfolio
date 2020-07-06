@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Weatherapp.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -87,7 +87,7 @@ function Weatherapp() {
                         value={link}
                         onKeyPress={searchCity}
                     />
-                    <img onClick={localWeather} src={location} />
+                    <img alt='localweatherlogo' onClick={localWeather} src={location} />
                 </div>
 
                 {(typeof weatherinfo.main != "undefined") ? (

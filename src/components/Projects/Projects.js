@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './todoapp.scss';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
@@ -21,15 +21,15 @@ function Projects() {
         <h1 className='myprojects'>PROJECTS I'VE BEEN WORKING ON:</h1>
         <div className='project-list'>
             <Link to="/Todoapp">
-                <div onClick={toTop} data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
-                <div data-aos="fade-up" className='sepLine'></div>
+                <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
+                <div data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
             <Link to="/Weatherapp">
-                <div onClick={toTop} data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1></div>
-                <div data-aos="fade-up" className='sepLine'></div>
+                <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1></div>
+                <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
-            <Link to="/Spotifyapp">
-                <div data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>SPOTIFY APP</h1></div>
+            <Link to="/Tiktaktoe">
+                <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TIK TAK TOE</h1></div>
             </Link>
         </div>
     </div>

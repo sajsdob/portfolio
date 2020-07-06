@@ -33,7 +33,7 @@ class About extends Component {
                         <a  href='mailto: sajsdob@gmail.con'>REACH OUT</a>
                     </div>
                 </div>
-                <img data-aos-delay ='200' data-aos="zoom-in" src={face}></img>
+                <img alt='face' data-aos-delay ='200' data-aos="zoom-in" src={face}></img>
             </div>
         )
     }

@@ -1,7 +1,14 @@
 
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('../../assets/Anton/Anton-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+
 .About {
     display: flex;
     &::after {
+
+        
         content: '';
         display: block;
     }
@@ -41,7 +48,7 @@
         display: inline-block;
         line-height: 30px;
         border-radius: 2px;
-        font-family: Impacto, Impact, sans-serif;
+        font-family: 'MyWebFont';
         &:hover {
             cursor: pointer;
             background-color: black;
@@ -113,3 +120,4 @@
         margin-left: 3vw;
     }
 }
+

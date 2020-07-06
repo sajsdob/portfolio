@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('../../assets/Anton/Anton-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
 .myprojects {
     padding-top: 12vh;
     text-align: center;
@@ -7,7 +11,7 @@
     z-index: 4;
 }
 .sepLine {
-    width: 74%;
+    width: 10%;
     height: 3px;
     background: black;
     margin: 2px auto;
@@ -36,7 +40,7 @@
     color: black;
     text-align: center;
     line-height: 40px;
-    font-family: Impacto, Impact, sans-serif;
+    font-family: 'MyWebFont';
     margin-bottom: 20px;
     &:hover {
         cursor: pointer;
@@ -51,6 +55,7 @@
         -ms-transform: translateY(-50%);
         text-align: center;
         width: 100%;
+        letter-spacing: 1px;
     }
 
     .background-color {
@@ -131,6 +136,7 @@ input {
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             color: white;
+            letter-spacing: 1px;
         }
         .background-color {
             border-radius: 2.5px;
@@ -149,4 +155,7 @@ input {
         padding-top: 12vh;
     }
 }
+
+
+
 

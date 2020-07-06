@@ -12,7 +12,7 @@ import Skills from './components/Skills/Skills.js';
 import Experience from './components/Experience/Experience.js';
 import Email from './components/Email/Email.js';
 import Social from './components/Social/Social.js';
-
+import Tiktaktoe from './components/Spotifyapp/Tiktaktoe.js';
 
 class App extends Component {
 
@@ -74,12 +74,6 @@ class App extends Component {
     }
   }
 
-  componentDidMount () {
-    alert('NOTE that this website is still under development. Feel Free to check whats already been done though :)')
-  }
-
-
-
   render() {
     return (
       <Router>
@@ -110,8 +104,15 @@ class App extends Component {
               </Route>
               <Route path='/Todoapp' component={Todoapp} />
               <Route path='/Weatherapp' component={Weatherapp} />
+              <Route path='/Tiktaktoe' component={Tiktaktoe} />
             </Switch>
           </div>
+          {/* <div className='form'>
+            <input type='text' className='testinput' required />
+            <label className='testlabel'>
+              <span className='testspan'>name:</span>
+            </label>
+          </div> */}
           <Skills />
           <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
           <Email />
