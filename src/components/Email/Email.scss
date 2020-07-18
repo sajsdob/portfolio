@@ -20,7 +20,11 @@
         &:hover {
             color: red;
             transition: 0.25s;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+        }
+        &:hover::after {
+            transition: 0.25s;
+            transform: translateY(3px);
         }
         &::after {
             content: "";
@@ -33,6 +37,7 @@
             left: 8px;
             top: 200px;
             border-radius: 2px;
+            transition: 0.25s;
         }
     }
 }

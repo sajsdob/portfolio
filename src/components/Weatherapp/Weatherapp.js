@@ -42,7 +42,7 @@ function Weatherapp() {
                 const lon = position.coords.longitude
                 fetch(`https://eu1.locationiq.com/v1/reverse.php?key=c327a65f799172&lat=${lat}&lon=${lon}&format=json`)
                     .then(res => res.json())
-                    .then(result => {
+                    .then(result => {       
                         setCity(result.address.city)
                         return result.address.city
                     })
@@ -50,6 +50,7 @@ function Weatherapp() {
                         fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
                             .then(res => res.json())
                             .then(result => {
+                                console.log(result);
                                 setLoading(false)
                                 setWeatherinfo(result);
                             });

@@ -1,133 +1,150 @@
-
-   .todo-app {
-       min-height: 80vh;
-       margin-top: 45px;
+.todo-app {
+    min-height: 80vh;
+    margin-top: 45px;
     h1 {
-        font-family: 'MyWebFont';
+        font-family: "MyWebFont";
         letter-spacing: 1.2px;
     }
-   ul {
-       margin-left: auto;
-       margin-left: auto;
-       text-align: center;
-       margin-top: 70px;
+    ul {
+        margin-left: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-top: 70px;
 
-       li {
-           font-weight: bold;
-           font-family: monospace;
-           &:hover button {
-               background-color: white;
-           }
-           &:hover {
-               border-color: red;
+        li {
+            height: 40px;
+            font-weight: bold;
+            font-family: monospace;
+            border: 2px solid;
+            border-radius: 3px;
+            width: 50%;
+            overflow: auto;
+            margin: 5px auto;
+            padding: 10px;
+            list-style: none;
+            background-color: whitesmoke;
+            position: relative;
+            transition: 0.2s;
+            &:hover button {
+                background-color: white;
+            }
+            &:hover {
                 cursor: pointer;
                 background-color: white;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                width: 51%;
+                transition: 0.2s;
+            }
 
-           }
-           border: 2px solid;
-           border-radius: 3px;
-           width: 50%;
-           overflow: auto;
-           margin: 5px auto;
-           padding: 10px;
-           list-style: none;
-           background-color: whitesmoke;
-       }
-   }
+            .add-to-done {
+                transition: 0.2s;
+                position: absolute;
+                left: 5px;
+                height: 30px;
+                bottom: 0px;
+                border: none;
+                background-color: whitesmoke;
+                font-weight: bold;
+                &:focus {
+                    outline: 0px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(11, 88, 11);
+                }
+            }
+            .delete {
+                transition: 0.2s;
+                position: absolute;
+                right: 5px;
+                height: 30px;
+                bottom: 0px;
+                border: none;
+                background-color: whitesmoke;
+                font-weight: bold;
+                &:focus {
+                    outline: 0px;
+                }
+                &:hover {
+                    color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 
-span {
-    color: red;
-}
+    span {
+        color: rgb(11, 88, 11);
+    }
 
-button {
-    background-color: whitesmoke;
-    &:hover {
-        cursor: pointer;
-        color: red;
+    .userinput {
+        display: flex;
+        justify-content: center;
+    }
+
+    .textinput {
+        width: 30%;
+    }
+    .addbutton {
         font-weight: bold;
-    }
-    border-radius: 2px;
-    border: none;
-    margin: 0;
-    padding: 0;
-
-    /* inherit font & color from ancestor */
-    color: black;
-
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
-    padding: 3px;
-    margin-top: 7px;
-}
-
-.userinput {
-    display: flex;
-    justify-content: center;
-}
-
-.textinput {
-    width: 30%;
-}
-.addbutton {
-    font-weight: bold;
-    width: 40px;
-    padding-top: 9px;
-    margin-left: 10px;
-    color: white;
-    background-color: red;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 2px;
-    &:hover {
-        cursor: pointer;
+        width: 40px;
+        padding-top: 9px;
+        margin-left: 10px;
+        color: white;
+        background-color: red;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 2px;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
-
-   }
-
 
 @media only screen and (max-width: 960px) {
-  
-    .todo-app  {
+    .todo-app {
         ul {
             li {
                 width: 70%;
-                .tak {
+                &:hover {
+                    background-color: whitesmoke;
+                    border-color: black;
+                    width: 70%;
+                    box-shadow: none;
+                }
+                &:hover button {
+                    background-color: whitesmoke;
+                }
+                .add-to-done {
+                    color: rgb(11, 88, 11);
+                }
+                .delete {
                     color: red;
-                    font-weight: bold;
                 }
             }
         }
     }
 
     .userinput {
-      flex-direction: column;
-      .addbutton {
-        width: 11%;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: bolder;
-        text-align: center;
-    }
-    .textinput {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        flex-direction: column;
+        .addbutton {
+            width: 11%;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .textinput {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
 .done h1 {
-  font-family: monospace;
+    font-family: monospace;
 }
-
-
-
-

@@ -29,6 +29,8 @@ class Sidebar extends Component {
                     <li onClick={this.props.changeSideBarClass}><a href='/#projects'>PROJECTS</a></li>
                     <div className='sideline'></div>
                     <li onClick={this.props.changeSideBarClass}><a href='/#experience'>EXPERIENCE</a></li>
+                    <div className='sideline'></div>
+                    <li onClick={this.props.changeSideBarClass}><a href='/#skills'>SKILLS</a></li>
                 </ul>
                 <div className='social-container'>
                         <a href="https://www.github.com/sajsdob" target="_blank" rel="noopener noreferrer">

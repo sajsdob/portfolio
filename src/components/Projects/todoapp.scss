@@ -11,9 +11,9 @@
     z-index: 4;
 }
 .sepLine {
-    width: 10%;
-    height: 3px;
-    background: black;
+    width: 75%;
+    height: 1px;
+    background: lightgray;
     margin: 2px auto;
     display: none;
     border-radius: 4px;
@@ -23,13 +23,13 @@
     display: flex;
     justify-content: space-around;
     z-index: 2;
+    flex-wrap: wrap;
     a {
         position: relative;
         text-decoration: none;
     }
 }
 .todo-list {
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 3;
     position: relative;
     margin: 0px auto;
@@ -42,9 +42,15 @@
     line-height: 40px;
     font-family: 'MyWebFont';
     margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
     &:hover {
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         cursor: pointer;
-    }
+    };
+   
 
     h1 {
         z-index: 4;

@@ -12,7 +12,10 @@ constructor(props){
     return(
       <ul>
         <h1 className = 'todo'>TO DO: </h1>
-        {items.map((item, index)=><li className = 'nie' onClick={(e)=>deleted(index)} key={index}>{item} <br/> <button className='tak' onClick={(e)=>addToDone(item)}> MOVE TO DONE</button> </li>)}
+        {items.map((item, index)=><li className = 'nie' key={index}>{item} <br/>
+        <button className='add-to-done' onClick={(e)=>addToDone(item, index)}> MOVE TO DONE </button> 
+        <button className='delete' onClick={(e)=>deleted(index)}> DELETE </button>
+        </li>)}
       </ul>
     )
   }

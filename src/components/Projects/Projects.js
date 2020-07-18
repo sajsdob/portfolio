@@ -20,7 +20,7 @@ function Projects() {
     return <div id='projects'>
         <h1 className='myprojects'>PROJECTS I'VE BEEN WORKING ON:</h1>
         <div className='project-list'>
-            <Link to="/Todoapp">
+            <Link className='boxshadow' to="/Todoapp">
                 <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
                 <div data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
@@ -29,7 +29,11 @@ function Projects() {
                 <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
             <Link to="/Tiktaktoe">
-                <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TIK TAK TOE</h1></div>
+                <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TIC TAC TOE</h1></div>
+                <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
+            </Link>
+            <Link to="/Metronome">
+                <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>GRADE AVERAGE </h1></div>
             </Link>
         </div>
     </div>

@@ -20,6 +20,7 @@ class About extends Component {
 
     render() {
         return (
+
             <div data-aos="fade-in" className="About">
                 <div>
                     <h1>HELLO, MY NAME IS</h1>

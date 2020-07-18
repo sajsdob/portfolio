@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('../../assets/Anton/Anton-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+
 .tiktaktoe {
     position: relative;
     height: 100vh;
@@ -5,7 +10,8 @@
     h1 {
         text-align: center;
         font-size: 50px;
-        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-family: 'MyWebFont';
+        letter-spacing: 1.2px;
     }
     .restart {
         font-size: 20px;
@@ -16,28 +22,44 @@
         display: block;
         border: 3px solid red;
         font-family: monospace;
+        background-color: whitesmoke;
         line-height: 30px;
+        text-align: center;
         &:hover {
             background: white;
             cursor: pointer;
         }
+        &:focus {
+            outline: 0;
+        }
     }
     .board {
-        height: 300px;
-        width: 300px;
+        height: 25vw;
+        width: 25vw;
         margin: 10px auto;     
         display: flex;
         flex-wrap: wrap;
         position: relative;
         button {
+            &:focus {
+                outline: 0;
+            }
+
+            .click {
+                    position: absolute;
+                    width: 100%;
+                    height: 100% ;
+            }
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            width: 100px;
-            height: 100px;
+            width: 33.3%;
+            height: 33.3%;
             background: red;
             border: 1px whitesmoke solid;
             color: whitesmoke;
             font-size: 60px;
-            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            font-family: 'MyWebFont';
+            letter-spacing: 1.2px;
+            position: relative;
             &:hover {
                 cursor: pointer;
             }
@@ -53,7 +75,8 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: 'MyWebFont';
+            letter-spacing: 1.2px;
         }
     }
 }
@@ -61,12 +84,12 @@
 @media only screen and (max-width: 960px) {
     .tiktaktoe {
         position: relative;
-        height: 100vh;
-        width: 100vw;
+        height: calc(var(--vh, 1vh) * 100);
+        width: 100%;
         h1 {
             text-align: center;
             font-size: 50px;
-            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            font-family: 'MyWebFont';
         }
         .restart {
             font-size: 20px;
@@ -84,20 +107,21 @@
             }
         }
         .board {
-            height: 300px;
-            width: 300px;
+            text-align: center;
+            width: 80vw;
+            height: 80vw;
             margin: 40px auto;     
             display: flex;
             flex-wrap: wrap;
             button {
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-                width: 100px;
-                height: 100px;
+                text-align: center;
+                width: 33.3%;
+                height: 33.3%;
                 background: red;
                 border: 1px whitesmoke solid;
                 color: whitesmoke;
                 font-size: 60px;
-                font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-family: 'MyWebFont';
                 &:hover {
                     cursor: pointer;
                 }

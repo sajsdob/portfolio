@@ -59,15 +59,18 @@ class Todoapp extends Component {
   }
 
 
-  addToDone = (e) => {
+  addToDone = (e, indexp) => {
     var donelist = this.state.done;
     donelist.push(e)
     this.setState({
       done: donelist
     });
     if (this.state.items.length === 1) {
-      alert("Good job!", "You clicked the button!", "success");
-    }
+    };
+    var newarray = this.state.items.filter((item, index) => index !== indexp);
+    this.setState({
+      items: newarray
+    })
   }
 
   handleKeyPress = (event, ) => {

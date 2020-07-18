@@ -13,6 +13,8 @@ import Experience from './components/Experience/Experience.js';
 import Email from './components/Email/Email.js';
 import Social from './components/Social/Social.js';
 import Tiktaktoe from './components/Spotifyapp/Tiktaktoe.js';
+import Metronome from './components/Metronome/Metronome.js';
+import MySkills from './components/MySkills/MySkills.js';
 
 class App extends Component {
 
@@ -26,6 +28,17 @@ class App extends Component {
       sidebarClassLineThree: 'line3',
       margin: 'one'
     }
+  }
+
+
+  onDragStart = () => {
+    console.log('start');
+    
+  }
+
+  dragOver = () => {
+    console.log('dragover');
+    
   }
 
 
@@ -100,11 +113,13 @@ class App extends Component {
                   <About hideSide={this.hideSide} sidebarClass={this.state.sidebarClass} />
                   <Projects />
                   <Experience />
+                  <MySkills />
                 </div>
               </Route>
               <Route path='/Todoapp' component={Todoapp} />
               <Route path='/Weatherapp' component={Weatherapp} />
               <Route path='/Tiktaktoe' component={Tiktaktoe} />
+              <Route path='/Metronome' component={Metronome} />
             </Switch>
           </div>
           {/* <div className='form'>

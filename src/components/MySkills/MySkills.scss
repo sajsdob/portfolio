@@ -1,0 +1,175 @@
+@font-face {
+    font-family: "MyWebFont";
+    src: url("../../assets/Anton/Anton-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+.myskills {
+    width: 100%;
+    min-height: 110vh;
+    margin: 0 auto;
+    position: relative;
+    background: whitesmoke;
+    overflow: hidden;
+    .types-of-skills {
+        width: 100%;
+        display: flex;
+        .languages {
+            width: 33%;
+            margin-top: 40px;
+            display: inline-block;
+            p {
+                font-family: monospace;
+                font-size: 1.5vw;
+                margin-bottom: 43px;  
+            }
+            li {
+                font-family: 'MyWebFont';
+                letter-spacing: 0.5px;
+                font-size: 3.1vw;
+                line-height: 50px;
+                &:hover {
+                    cursor: pointer;
+                }
+                span {
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                    color: red;
+                    display: inline-block;
+                    position: relative;
+                }
+                &:hover span {
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                    transform: translateX(50px);
+                }
+            }
+        }
+        .technologies {
+            display: inline-block;
+            right: 0px;
+            width: 33%;
+            margin-top: 40px;
+            list-style: none;
+            position: relative;
+            text-align: center;
+            &::before {
+                content: '';
+                width: 1px;
+                height: 100%;
+                background: lightgray;
+                display: block;
+                position: absolute;
+                top: 0;
+            }
+            &::after {
+                content: '';
+                width: 1px;
+                height: 100%;
+                background: lightgray;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            p {
+                font-family: monospace;
+                font-size: 1.5vw;
+                margin-bottom: 43px;
+            }
+  
+            li {
+                font-family: 'MyWebFont';
+                letter-spacing: 0.5px;
+                font-size: 3.1vw;
+                line-height: 50px;
+                transition: all 0.1.5s cubic-bezier(.25,.8,.25,1);
+                &:hover {
+                    cursor: pointer;
+                    color: red;
+                }
+                &:hover span {
+                    color: black;
+                }
+                span{
+                    color: red;
+                }
+            }
+        }
+        .soft {
+            display: inline-block;
+            width: 33%;
+            margin-top: 40px;
+            list-style: none;
+            position: relative;
+            text-align: right;
+            p {
+                font-family: monospace;
+                font-size: 1.5vw;
+                margin-bottom: 43px;
+            }
+  
+            li {
+                font-family: 'MyWebFont';
+                letter-spacing: 0.5px;
+                font-size: 3.1vw;
+                line-height: 50px;
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                &:hover {
+                    cursor: pointer;
+                    transform: translateX(-10px);
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                }
+                &:hover span {
+                    color: black;
+                }
+                span{
+                    color: red;
+                }
+            }
+        }
+    }
+    h1 {
+        text-align: center;
+        width: 100%;
+        margin: 10px auto;
+        font-family: monospace;
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+    .types-of-skills {
+        flex-direction: column;
+        .technologies, .languages, .soft {
+            width: 100% !important;
+            p {
+                font-family: monospace;
+                font-size: 20px !important;
+                margin-bottom: 43px;
+            }
+  
+            li {
+                font-size: 45px !important;
+            }
+        }
+        .languages {
+            text-align: center;
+        }
+        .technologies {
+            padding-top: 35px;
+            padding-bottom: 60px;
+            margin-bottom: 0px;
+            &::before {
+                width: 100% !important;
+                height: 1px !important;
+            }
+            &::after {
+                top: 100% !important;
+                width: 100% !important;
+                height: 1px !important;
+            }
+        }
+        .soft {
+            text-align: center !important;
+            margin-bottom: 100px;
+        }
+    }
+}
