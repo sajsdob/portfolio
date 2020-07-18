@@ -32,7 +32,7 @@ function Projects() {
                 <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>TIC TAC TOE</h1></div>
                 <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
-            <Link to="/Metronome">
+            <Link to="/Grades">
                 <div onClick={toTop} data-aos-once='true' data-aos="fade-up" className='todo-list'><div className='background-color'></div><h1>GRADE AVERAGE </h1></div>
             </Link>
         </div>
