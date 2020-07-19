@@ -21,19 +21,19 @@ function Projects() {
         <h1 className='myprojects'>PROJECTS I'VE BEEN WORKING ON:</h1>
         <div  className='project-list'>
             <Link data-aos-once='true' data-aos="fade-up" className='boxshadow' to="/Todoapp">
-                <div onClick={toTop}  className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1></div>
+                <div onClick={toTop}  className='todo-list'><div className='background-color'></div><h1>TO DO LIST</h1><span>OPEN</span></div>
                 <div data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
             <Link data-aos-once='true' data-aos="fade-up" to="/Weatherapp">
-                <div onClick={toTop}  className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1></div>
+                <div onClick={toTop}  className='todo-list'><div className='background-color'></div><h1>WEATHER APP</h1> <span>OPEN</span></div>
                 <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
             <Link data-aos-once='true' data-aos="fade-up" to="/Tiktaktoe">
-                <div onClick={toTop}  className='todo-list'><div className='background-color'></div><h1>TIC TAC TOE</h1></div>
+                <div onClick={toTop}  className='todo-list'><div className='background-color'></div><h1>TIC TAC TOE</h1><span>OPEN</span></div>
                 <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
             <Link data-aos-once='true' data-aos="fade-up" to="/Grades">
-                <div onClick={toTop} className='todo-list'><div className='background-color'></div><h1>GRADE AVERAGE </h1></div>
+                <div onClick={toTop} className='todo-list'><div className='background-color'></div><h1>GRADE AVERAGE </h1><span>OPEN</span></div>
             </Link>
         </div>
     </div>

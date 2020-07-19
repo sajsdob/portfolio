@@ -3,10 +3,6 @@
     src:  url('../../assets/Anton/Anton-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
   }
 
-
-  project-container {
-      
-  }
 .myprojects {
     padding-top: 12vh;
     text-align: center;
@@ -48,14 +44,15 @@
     font-family: 'MyWebFont';
     margin-bottom: 20px;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     &:hover {
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         cursor: pointer;
     };
-   
-
+    span {
+        display: none;
+    }
     h1 {
         z-index: 4;
         position: relative;
@@ -69,13 +66,27 @@
     }
 
     .background-color {
+        
         border-radius: 2.5px;
         position: absolute;
-        background-color: red;
+
+        //BACKGROUND COLOR
+        background: red;
+
         width: 100%;
         height: 100%;
         transition: 0.3s;
         z-index: 5;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-repeat: repeat;
+            height: 10px;
+            background-size: 20px 20px;
+        }
     }
     &:hover .background-color {
         height: 0;
@@ -128,6 +139,8 @@ input {
 @media only screen and (max-width: 960px) {
     .sepLine {
       display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     #projects {
         margin-top: 35px;
@@ -136,26 +149,64 @@ input {
         flex-direction: column;
     }
     .todo-list {
-        height: 45vw;
-        width: 75vw;
-        background-color: red;
-        box-shadow: 0 3px 3px rgba(0,0,0,0.13), 0 3px 15px rgba(0,0,0,0.23);
+        height: 80vw;
+        width: 65vw;
+        overflow: hidden;
+        margin-bottom: 0px;
+        span {
+            padding-top: 2px;
+            padding-right: 2px;
+            display: block;
+            width: 20%;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            margin: 0;
+            color: white;
+            z-index: 10;
+            background: red;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            font-family: monospace;
+            font-size: 3vw;
+            font-weight: 500;
+        }
+
+//BACKGROUND CHANGE
+ 
+// 
+
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+
         h1 {
-            top: 50%;
+            top: 42%;
             transform: translateY(-50%);
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
-            color: white;
+            color: black;
             letter-spacing: 1px;
+            z-index: 10;
         }
         .background-color {
             border-radius: 2.5px;
             position: absolute;
-            background-color: transparent;
-            width: 100%;
-            height: 100%;
+            background: whitesmoke;
+
+            width: 150%;
+            transform: rotate(-10deg);
+            height: 40%;
+            bottom: -50px;
+            left: -50px;
             transition: 0.3s;
             z-index: 5;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
         }
     }
     .myprojects {
@@ -165,6 +216,8 @@ input {
         padding-top: 12vh;
     }
 }
+
+
 
 
 
