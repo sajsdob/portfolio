@@ -144,7 +144,11 @@ input {
     }
     #projects {
         margin-top: 35px;
+        .myprojects {
+            margin-bottom: 60px;
+        }
     }
+
     .project-list {
         flex-direction: column;
     }
@@ -154,24 +158,23 @@ input {
         overflow: hidden;
         margin-bottom: 0px;
         span {
-            padding-right: 2px;
+            padding-top: 2px;
             display: block;
-            width: 20%;
-            height: 24px;
+            width: 22%;
+            height: 32px;
             display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
-            bottom: 16px;
-            right: 16px;
+            bottom: 17px;
+            right: 17px;
             margin: 0;
             color: white;
             z-index: 10;
             background: red;
             border-radius: 5px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            font-family: monospace;
-            font-size: 3vw;
+            font-size: 5vw;
             font-weight: 500;
         }
 
