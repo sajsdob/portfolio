@@ -10,6 +10,7 @@ const Tiktaktoe = () => {
   const [winner, setWinner] = useState(null);
 
   const move = (e) => {
+    window.navigator.vibrate(30);
 
     if (e.target.innerHTML !== 'X' && e.target.innerHTML !== '0') { 
       let updatedButtons = buttons;
