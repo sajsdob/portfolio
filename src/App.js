@@ -29,7 +29,7 @@ class App extends Component {
       margin: 'one'
     }
   }
-
+  
 
   onDragStart = () => {
     console.log('start');
@@ -41,6 +41,10 @@ class App extends Component {
     
   }
 
+
+  componentDidMount() {
+    document.title = 'Slawomir Bialynicki-Birulo'
+  }
 
   changeSideBarClass = () => {
     if (!this.state.sideBarOut) {
