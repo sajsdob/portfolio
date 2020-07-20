@@ -1,4 +1,5 @@
 
+
 $base-color: green;
 
 body {
@@ -125,4 +126,50 @@ html {
 }
 
 
+.switch {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    z-index: 7;
+    width: 65px;
+    height: 36px;
+    background: whitesmoke;
+    border-radius: 34px;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        background: red;
+    }
+    input {
+        pointer-events: auto;
+        width: 100px;
+        height: 100%;
+        display: none;
 
+        &:checked + .slider {
+            transition: 0.3s;
+            left: 32px;
+        }
+    }
+    .slider {
+        cursor: pointer;
+        pointer-events: auto;
+        box-sizing: border-box;
+        transition: 0.3s;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        display: block;
+        width: 28px;
+        background-color: red;
+        height: 28px;
+        border-radius: 50%;
+    }
+}
+
+.checkbox {
+    width: 100px;
+    height: 100%;
+    display: none !important;
+}

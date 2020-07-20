@@ -29,16 +29,16 @@ class App extends Component {
       margin: 'one'
     }
   }
-  
+
 
   onDragStart = () => {
     console.log('start');
-    
+
   }
 
   dragOver = () => {
     console.log('dragover');
-    
+
   }
 
 
@@ -94,23 +94,28 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className='App'>
-          <Footer changeSideBarClass={this.changeSideBarClass}
-            hamburgerToggle={this.hamburgerToggle}
-            sideBarOut={this.state.sideBarOut}
-            sidebarClassLineOne={this.state.sidebarClassLineOne}
-            sidebarClassLineTwo={this.state.sidebarClassLineTwo}
-            sidebarClassLineThree={this.state.sidebarClassLineThree}
-          />
-          <Sidebar
-            hamburgerToggle={this.hamburgerToggle}
-            sideBarOut={this.state.sideBarOut}
-            sidebarClassLineOne={this.state.sidebarClassLineOne}
-            sidebarClassLineTwo={this.state.sidebarClassLineTwo}
-            sidebarClassLineThree={this.state.sidebarClassLineThree}
-            changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass}
-          />
-          <div className='container'>
+        <Footer changeSideBarClass={this.changeSideBarClass}
+          hamburgerToggle={this.hamburgerToggle}
+          sideBarOut={this.state.sideBarOut}
+          sidebarClassLineOne={this.state.sidebarClassLineOne}
+          sidebarClassLineTwo={this.state.sidebarClassLineTwo}
+          sidebarClassLineThree={this.state.sidebarClassLineThree}
+        />
+        <Sidebar
+          hamburgerToggle={this.hamburgerToggle}
+          sideBarOut={this.state.sideBarOut}
+          sidebarClassLineOne={this.state.sidebarClassLineOne}
+          sidebarClassLineTwo={this.state.sidebarClassLineTwo}
+          sidebarClassLineThree={this.state.sidebarClassLineThree}
+          changeSideBarClass={this.changeSideBarClass} sidebarClass={this.state.sidebarClass}
+        />
+        <div className='container'>
+          <div className='App'>
+{/* 
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label> */}
             <Switch>
               <Route path='/' exact={true}>
                 <div className='main'>
