@@ -80,23 +80,34 @@
     .userinput {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .textinput {
         width: 30%;
+        background-color: white;
+        border: none;
+        height: 45px;
+        border-radius: 5px;
+        padding-bottom: 3px;
     }
     .addbutton {
-        font-weight: bold;
-        width: 40px;
-        padding-top: 9px;
+        padding-bottom: 1px;
+        font-family: monospace;
+        font-size: 45px;
+        height: 100%;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-left: 10px;
-        color: white;
-        background-color: red;
-        padding-left: 10px;
-        padding-right: 10px;
+        color: red;
         border-radius: 2px;
+        position: relative;
+        right: 10px;
         &:hover {
             cursor: pointer;
+            font-weight: bold;
         }
     }
 }

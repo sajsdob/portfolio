@@ -18,7 +18,7 @@ class Header extends Component {
           value={userinput}
           type='text'></input>
         <div className='addbutton'
-          onClick={() => addtolist(userinput)}>ADD</div>
+          onClick={() => addtolist(userinput)}>+</div>
       </div>
     )
   }
