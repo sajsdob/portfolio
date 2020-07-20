@@ -30,7 +30,7 @@ const Languages = () => {
                       <p>Soft skills I possess:</p>
                       <li>PATIENCE</li>
                       <li>ADAPTABILITY</li>    
-                      <li>SELF AWERNSESS</li>
+                      <li>SELF AWARENESS</li>
                       <li>PROBLEM SOLVING</li>
                   </ul>
             </div>
