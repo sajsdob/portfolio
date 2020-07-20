@@ -81,6 +81,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+
     }
 
     .textinput {
@@ -89,7 +91,7 @@
         border: none;
         height: 45px;
         border-radius: 5px;
-        padding-bottom: 3px;
+        font-size: 23px;
     }
     .addbutton {
         padding-bottom: 1px;
@@ -150,7 +152,6 @@
             margin-right: 5px;
             position: relative;
             left: 10px;
-            font-size: 25px
         }
     }
 }

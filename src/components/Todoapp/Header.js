@@ -13,7 +13,7 @@ class Header extends Component {
         <input 
           className='textinput'
           onKeyPress={handleKeyPress}
-          placeholder='ENTER TASK'
+          placeholder='Enter Task'
           onChange={(e) => changinginput(e.target.value)}
           value={userinput}
           type='text'></input>
