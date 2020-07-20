@@ -4,6 +4,7 @@
 }
 .metronome {
     margin-top: 100px;
+    min-height: 70vh;
     .add-class {
         .class-add-form {
             .input-container {
@@ -235,7 +236,7 @@
             li {
                 text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
                 margin: 0 auto;
-                font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-family: 'mywebfont';
                 display: flex;
                 align-items: center;
                 justify-content: center;
