@@ -3,6 +3,7 @@ import './About.scss';
 import face from '../../assets/logo.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import reachout from './../../assets/reachout.svg'
 
 AOS.init({ duration: 900 });
 
@@ -31,7 +32,7 @@ class About extends Component {
                         <p>I'm an aspiring front-end developer based in Poznań, POLAND. I'm specializing in building websites, web applications and everything in between.</p>
                     </div>
                     <div  data-aos="fade-up" className='contact-me'>
-                        <a  href='mailto: sajsdob@gmail.con'>REACH OUT</a>
+                        <a  href='mailto: sajsdob@gmail.con'><img src={reachout} className='reachsvg'/></a>
                     </div>
                 </div>
                 <img alt='face' data-aos-delay ='200' data-aos="zoom-in" src={face}></img>
