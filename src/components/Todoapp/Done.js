@@ -14,7 +14,7 @@ constructor(props){
     return(
       <ul>
         <h1 className = 'done'>DONE: </h1>
-        {done.map((item, index)=><li key={index}>{item}    <span>✔</span>
+        {done.map((item, index)=><li key={index}><div>{item} </div>   <span>✔</span>
         <button className='delete' onClick={(e)=>deletedone(index)} > DELETE </button></li>)}
       </ul>
     )

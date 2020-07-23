@@ -102,11 +102,17 @@ componentDidMount () {
   setChangedIndex = (index) => {
     this.setState({
       chandedIndex: index,
-      editInProgress: true
+      editInProgress: true,
     });
+    var currentValue = this.state.items[index]
+    this.setState({
+      editedItem: currentValue
+    })
+    
   }
 
-  saveEditedTask = () => {
+  saveEditedTask = (e) => {
+    e.preventDefault();
     let editedItems = this.state.items;
     editedItems[this.state.chandedIndex] = this.state.editedItem;
     this.setState({
@@ -119,10 +125,10 @@ componentDidMount () {
   render() {
     return (
       <div className='todo-app'>
-        <SimpleStorage parent={this} />
+        {/* <SimpleStorage parent={this} /> */}
         {this.state.editInProgress ?
           <div onClick={(e)=>this.closeModal(e)} className='edit-container'>
-            <form onClick={(e)=>e.stopPropagation()} className='edit-form' onSubmit={this.saveEditedTask}>
+            <form onClick={(e)=>e.stopPropagation()} className='edit-form' onSubmit={(e)=>this.saveEditedTask(e)}>
                             <label>
                                 EDIT TASK:
                             </label>

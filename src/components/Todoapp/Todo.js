@@ -12,7 +12,7 @@ constructor(props){
     return(
       <ul>
         <h1 className = 'todo'>TO DO: </h1>
-        {items.map((item, index)=><li className = 'nie' key={index}>{item} <br/>
+        {items.map((item, index)=><li className = 'nie' key={index}><div>{item}</div> <br/>
         <button className='add-to-done' onClick={(e)=>addToDone(item, index)}> DONE </button> 
         <button className='delete' onClick={(e)=>deleted(index)}> DELETE </button>
         <button  className='edit'onClick={()=>setChangedIndex(index)}>EDIT</button>
