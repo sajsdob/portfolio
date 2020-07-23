@@ -116,6 +116,21 @@
                     cursor: pointer;
                 }
             }
+            .edit {
+                transition: 0.2s;
+                border: none;
+                background-color: whitesmoke;
+                font-weight: bold;
+                position: absolute;
+                bottom: 5px;
+                width: 50px;
+                left: calc(50% - 25px);
+                text-align: center;
+                &:hover {
+                    color: rgb(255, 217, 0);
+                    cursor: pointer;
+                }
+            }
         }
     }
 
@@ -178,6 +193,9 @@
                 }
                 .delete {
                     color: red;
+                }
+                .edit {
+                    color: rgb(255, 217, 0);
                 }
             }
         }
