@@ -84,7 +84,6 @@ const Gradeaverage = () => {
         else {
         }
     }
-
     return (
 
         <div className='metronome'>

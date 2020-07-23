@@ -48,17 +48,17 @@
         align-items: center;
         position: absolute;
         .modal-back {
-            z-index: 4;
             position: fixed;
-            width: 100vw;
-            height: 100vh;
-            background-color: black;
-            top: 0;
             left: 0;
-            opacity: 0.3;
+            top: -10vh;
+            width: 100vw;
+            height: 110vh;
+            background: rgba(0, 0, 0, 0.329);
+            z-index: 1;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
         }
         .modal {
             z-index: 5;

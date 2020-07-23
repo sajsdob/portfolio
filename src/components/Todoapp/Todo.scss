@@ -1,6 +1,52 @@
 .todo-app {
     min-height: 80vh;
     margin-top: 45px;
+    .edit-container {
+        position: fixed;
+        left: 0;
+        top: -10vh;
+        width: 100vw;
+        height: 110vh;
+        background: rgba(0, 0, 0, 0.329);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(12px);
+        .edit-form {
+            animation: appear 0.3s forwards;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            justify-content: center;
+            margin-right: auto;
+            margin-left: auto;
+            height: 200px;
+            width: 300px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            
+            .edit-change {
+                font-size: 15px;
+            }
+            .edit-submit {
+                width: 30%;
+                border: none;
+                background: red;
+                color: white;
+                border-radius: 5px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 10px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
     h1 {
         font-family: "MyWebFont";
         letter-spacing: 1.2px;
@@ -82,7 +128,6 @@
         justify-content: center;
         align-items: center;
         position: relative;
-
     }
 
     .textinput {
