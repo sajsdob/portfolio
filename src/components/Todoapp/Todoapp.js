@@ -132,7 +132,7 @@ componentDidMount () {
                             <label>
                                 EDIT TASK:
                             </label>
-                            <input value={this.state.editedItem} className='edit-change' type='text' onChange={(e)=>this.setState({editedItem: e.target.value})}/>
+                            <textarea value={this.state.editedItem} className='edit-change' type='text' onChange={(e)=>this.setState({editedItem: e.target.value})}/>
                             <input className='edit-submit' type="submit" value="SAVE" />
                         </form>
           </div> : ''}
