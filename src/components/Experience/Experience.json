@@ -1,18 +1,22 @@
 {
     "four" : {
         "position":"Sales Delegate Executive",
-        "company":"Active Communications International"
+        "company":"Active Communications International",
+        "description": "nfawnfwafnaf"
     },
     "three" : {
         "position":"Owner",
-        "company":"Skateaholic Apparel"
+        "company":"Skateaholic Apparel",
+        "description": "nfawnfwafnaf"
     },
     "two" : {
         "position":"Social Media Manager",
-        "company":"Frosh Media Pty. Ltd."
+        "company":"Frosh Media Pty. Ltd.",
+        "description": "nfawnfwafnaf"
     },
     "one" : {
         "position":"Junior Developer/Analyst",
-        "company":"Alphanumeric Systems"
+        "company":"Alphanumeric Systems",
+        "description": "nfawnfwafnaf"
     }
 }

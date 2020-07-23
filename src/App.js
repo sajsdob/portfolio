@@ -137,6 +137,14 @@ class App extends Component {
               <span className='testspan'>name:</span>
             </label>
           </div> */}
+          {/* <div className='test'>
+              <div className='test1'></div>
+              <div className='test2'></div>
+          </div>
+          <div className='test'>
+              <div className='test1'></div>
+              <div className='test2'></div>
+          </div> */}
           <Skills />
           <p className='designed'>Designed & Created By: SLAWOMIR BIALYNICKI-BIRULO</p>
           <Email />

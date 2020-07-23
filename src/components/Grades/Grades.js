@@ -14,6 +14,7 @@ const Gradeaverage = () => {
     const [classToBeAdded, setClassToBeAdded] = useState('');
     const [newGrade, setNewGrade] = useState(1);
     const [subjects, setSubjects] = useState([]);
+    
 
     useEffect(() => {
 

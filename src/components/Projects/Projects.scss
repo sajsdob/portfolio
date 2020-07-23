@@ -157,6 +157,21 @@ input {
         width: 65vw;
         overflow: hidden;
         margin-bottom: 0px;
+        &:hover .background-color {
+            border-radius: 2.5px;
+            position: absolute;
+            background: whitesmoke;
+
+            width: 150%;
+            transform: rotate(-10deg);
+            height: 40%;
+            bottom: -50px;
+            left: -50px;
+            transition: 0.3s;
+            z-index: 5;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
         span {
             padding-top: 1px;
             display: block;

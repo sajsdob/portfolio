@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Weatherapp.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import location from '../../assets/location.png'
+import location from '../../assets/location.png';
 
 
 
@@ -78,6 +78,7 @@ function Weatherapp() {
 
     return (
         <div data-aos="slide-down" className='app'>
+
             <main>
                 <div className="search-box">
                     <input

@@ -29,7 +29,6 @@ const Experience = () => {
             <div className='jobinfo'>
                 <h3>{ExperienceJson[margin].position}</h3>
                 <h4  data-aos-once='true' data-aos='slide-up'>{ExperienceJson[margin].company}</h4>
-                {/* <img alt='link' className='link' src={link} /> */}
             </div>
 
         </div>

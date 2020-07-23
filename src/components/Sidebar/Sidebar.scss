@@ -34,11 +34,12 @@
         justify-content: space-around;
         position: absolute;
         top: 15vh;
+        width: 100%;
     }
     .sideline {
         transition: 0.8s;
-        width: 0%;
-        height: 3px;
+        width: 15%;
+        height: 2px;
         background: black;
         margin: 2px auto;
         border-radius: 4px;
@@ -140,11 +141,12 @@
         justify-content: space-around;
         position: absolute;
         top: 15vh;
+        width: 100%;
     }
     .sideline {
         transition: 0.8s;
-        width: 50%;
-        height: 3px;
+        width: 45%;
+        height: 2px;
         background: red;
         margin: 5px auto;
         border-radius: 4px;
