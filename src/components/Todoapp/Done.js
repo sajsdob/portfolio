@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import deleteimg from '../../assets/delete.png' 
 
 
 
@@ -18,7 +19,7 @@ constructor(props){
         <br/>
         <span>✔</span>
         </div> 
-        <button className='delete' onClick={(e)=>deletedone(index)} > DELETE </button></li>)}
+        <img className='delete' onClick={(e)=>deletedone(index)} src={deleteimg}/></li>)}
       </ul>
     )
   }
