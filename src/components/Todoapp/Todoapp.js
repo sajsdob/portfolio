@@ -125,7 +125,7 @@ componentDidMount () {
   render() {
     return (
       <div className='todo-app'>
-        <SimpleStorage parent={this} />
+        {/* <SimpleStorage parent={this} /> */}
         {this.state.editInProgress ?
           <div onClick={(e)=>this.closeModal(e)} className='edit-container'>
             <form onClick={(e)=>e.stopPropagation()} className='edit-form' onSubmit={(e)=>this.saveEditedTask(e)}>

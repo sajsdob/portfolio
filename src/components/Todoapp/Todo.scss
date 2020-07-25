@@ -107,21 +107,18 @@
             }
 
             .add-to-done {
-                transition: 0.2s;
                 position: absolute;
                 left: 4px;
                 height: 22px;
                 bottom: 4px;
                 border: none;
                 font-weight: bold;
-                transition: 0.3s;
+
                 &:focus {
                     outline: 0px;
                 }
                 &:hover {
-                    transition: 0.3s;
                     cursor: pointer;
-                    transform: scale(1.1);
                 }
             }
             .delete {
@@ -131,18 +128,14 @@
                 bottom: 4px;
                 border: none;
                 font-weight: bold;
-                transition: 0.3s;
                 &:focus {
                     outline: 0px;
                 }
                 &:hover {
-                    transition: 0.3s;
                     cursor: pointer;
-                    transform: scale(1.1);
                 }
             }
             .edit {
-                transition: 0.2s;
                 border: none;
                 font-weight: bold;
                 position: absolute;
@@ -151,11 +144,8 @@
                 width: 19px;
                 left: calc(50% - 12px);
                 text-align: center;
-                transition: 0.3s;
                 &:hover {
-                    transition: 0.3s;
                     cursor: pointer;
-                    transform: scale(1.1);
                 }
             }
         }
