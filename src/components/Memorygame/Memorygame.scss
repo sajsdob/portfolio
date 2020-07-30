@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('../../assets/Anton/Anton-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+  .memorygame {
+    width: 100%;
+    min-height: 90vh;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-family: 'MyWebFont';
+        letter-spacing: 1.2px;
+        font-size: 45px;
+    }
+    h2 {
+       margin: 0 auto;
+       text-align: center;
+       width: 200px;
+    }
+    button {
+        width: 200px;
+        margin: 10px auto;
+    }
+    .card-container {
+        margin: 10px auto;
+        width: 460px;
+        height: 460px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-radius: 5px;
+        .card {
+            width: 23%;
+            height: 23%;
+            transition: 0.1s;
+            border-radius: 5px;
+            position: relative;
+            .card-front {
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                background-color: whitesmoke;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 70px;
+                position: absolute;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                transform: rotateY(90deg);
+            }
+            .card-back {
+                position: absolute;
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                background-color:  rgb(255, 17, 0);
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                z-index: -1;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.reveal {
+    width: 23%;
+    height: 23%;
+    transition: 0.1s;
+    border-radius: 5px;
+    position: relative;
+     .card-front {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 70px;
+        position: absolute;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transform: rotateY(90deg);
+        animation: flip 0.2s forwards;
+        animation-delay: 0.2s;
+    }
+     .card-back {
+        position: absolute;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        background-color:  rgb(255, 17, 0);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        z-index: -1;
+        animation: flipin 0.2s forwards;
+    }
+}
+.hide {
+    .card-front {
+
+       animation: flipin 0.2s forwards;
+   }
+    .card-back {
+       animation: flip 0.2s forwards;
+       animation-delay: 0.2s;
+   }
+}
+
+
+@keyframes flip {
+    0% {
+
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+@keyframes flipin {
+    0% {
+
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+.none { 
+    display: none
+}
+
+
+
+
+@media only screen and (max-width: 960px) {
+
+    .memorygame {
+        width: 90%;
+        min-height: 90vh;
+        padding-top: 25px;
+        margin: 0 auto;
+        h1 {
+            width: 100%;
+            text-align: center;
+            font-family: 'MyWebFont';
+            letter-spacing: 1.2px;
+            font-size: 45px;
+        }
+        .card-container {
+            margin: 20px auto;
+            width: 280px;
+            height: 280px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-radius: 5px;
+            .card {
+                width: 23%;
+                height: 23%;
+                transition: 0.1s;
+                border-radius: 5px;
+                position: relative;
+                .card-front {
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: whitesmoke;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 50px;
+                    position: absolute;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    transform: rotateY(90deg);
+                }
+                .card-back {
+                    position: absolute;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    background-color:  rgb(255, 17, 0);
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    z-index: -1;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    .reveal {
+        width: 23%;
+        height: 23%;
+        transition: 0.1s;
+        border-radius: 5px;
+        position: relative;
+         .card-front {
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 55px;
+            position: absolute;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            transform: rotateY(90deg);
+            animation: flip 0.2s forwards;
+            animation-delay: 0.2s;
+        }
+         .card-back {
+            position: absolute;
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            background-color:  rgb(255, 17, 0);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            z-index: -1;
+            animation: flipin 0.2s forwards;
+        }
+    }
+    .hide {
+        .card-front {
+    
+           animation: flipin 0.2s forwards;
+       }
+        .card-back {
+           animation: flip 0.2s forwards;
+           animation-delay: 0.2s;
+       }
+    }
+}

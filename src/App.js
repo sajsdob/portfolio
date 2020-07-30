@@ -15,6 +15,7 @@ import Social from './components/Social/Social.js';
 import Tiktaktoe from './components/Spotifyapp/Tiktaktoe.js';
 import Grades from './components/Grades/Grades.js';
 import MySkills from './components/MySkills/MySkills.js';
+import Memorygame from './components/Memorygame/Memorygame.js';
 
 class App extends Component {
 
@@ -129,6 +130,7 @@ class App extends Component {
               <Route path='/Weatherapp' component={Weatherapp} />
               <Route path='/Tiktaktoe' component={Tiktaktoe} />
               <Route path='/Grades' component={Grades} />
+              <Route path='/Memorygame' component={Memorygame} />
             </Switch>
           </div>
           {/* <div className='form'>

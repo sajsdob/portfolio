@@ -31,6 +31,7 @@ function Weatherapp() {
                     setWeatherinfo(result);
                     setLink('');
                 });
+            //CLOSE KEYBOARD
             document.activeElement.blur();
         }
     }
