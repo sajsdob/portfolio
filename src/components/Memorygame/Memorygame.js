@@ -138,8 +138,8 @@ function Memorygame() {
                 setUnclickable(deletedDups)
                 setOpenedCount(0)
                 var cleared = emojis;
-                cleared[currentOpened[0]].class = 'card'
-                cleared[currentOpened[1]].class = 'card'
+                cleared[currentOpened[0]].class = 'hide'
+                cleared[currentOpened[1]].class = 'hide'
                 setEmojis(cleared)
                 setcurrentOpened([])
                 setToCompare([])
