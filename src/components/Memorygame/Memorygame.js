@@ -138,8 +138,8 @@ function Memorygame() {
                 setUnclickable(deletedDups)
                 setOpenedCount(0)
                 var cleared = emojis;
-                cleared[currentOpened[0]].class = 'hide'
-                cleared[currentOpened[1]].class = 'hide'
+                cleared[currentOpened[0]].class = 'card'
+                cleared[currentOpened[1]].class = 'card'
                 setEmojis(cleared)
                 setcurrentOpened([])
                 setToCompare([])
@@ -152,12 +152,12 @@ function Memorygame() {
         }
     })
 
-    // useEffect(() => {
-    //     emojis.sort(() => Math.random() - 0.5);
-    //     return () => {
+    useEffect(() => {
+        emojis.sort(() => Math.random() - 0.5);
+        return () => {
           
-    //     }
-    //   }, []);
+        }
+      }, []);
 
     return (
         <div className='memorygame'>
