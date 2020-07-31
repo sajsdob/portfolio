@@ -84,16 +84,15 @@ function Memorygame() {
             setSteps(0);
             let updated = emojis;
             updated.forEach(a => a.class = 'card');
-            setEmojis(updated)
-        if (started === false) {
-            setStarted(true);
-        }
-        else {
-            emojis.sort(() => Math.random() - 0.5);
-            setStarted(false)
+            setEmojis(updated);
             setOpenedCount(0)
             setToCompare([]) 
             setcurrentOpened([]);
+        if (started) {
+            setStarted(true);
+        }
+        else {
+            setStarted(false)
         }
         emojis.sort(() => Math.random() - 0.5);
     }
