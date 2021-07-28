@@ -40,7 +40,6 @@ function Projects() {
                 <div onClick={toTop} className='todo-list'><div className='background-color'></div><h1>MEMORY GAME</h1><span>OPEN</span></div>
                 <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
             </Link>
-
         </div>
     </div>
 }
