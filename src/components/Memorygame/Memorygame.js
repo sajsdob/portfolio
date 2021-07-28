@@ -154,7 +154,6 @@ function Memorygame() {
     useEffect(() => {
         emojis.sort(() => Math.random() - 0.5);
         return () => {
-          
         }
       }, []);
 

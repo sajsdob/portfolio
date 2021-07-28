@@ -38,6 +38,10 @@ function Projects() {
             </Link>
             <Link data-aos-once='true' data-aos="fade-up" to="/Memorygame">
                 <div onClick={toTop} className='todo-list'><div className='background-color'></div><h1>MEMORY GAME</h1><span>OPEN</span></div>
+                <div  data-aos-once='true' data-aos="fade-up" className='sepLine'></div>
+            </Link>
+            <Link data-aos-once='true' data-aos="fade-up" to="/Blackjack">
+                <div onClick={toTop} className='todo-list'><div className='background-color'></div><h1>BLACKJACK</h1><span>OPEN</span></div>
             </Link>
         </div>
     </div>

@@ -16,6 +16,7 @@ import Tiktaktoe from './components/Spotifyapp/Tiktaktoe.js';
 import Grades from './components/Grades/Grades.js';
 import MySkills from './components/MySkills/MySkills.js';
 import Memorygame from './components/Memorygame/Memorygame.js';
+import Blackjack from './components/Blackjack/Blackjack.js';
 
 class App extends Component {
 
@@ -43,9 +44,6 @@ class App extends Component {
   }
 
 
-  componentDidMount() {
-    document.title = 'Slawomir Bialynicki-Birulo'
-  }
 
   changeSideBarClass = () => {
     if (!this.state.sideBarOut) {
@@ -90,7 +88,10 @@ class App extends Component {
       })
       document.body.style.overflow = "visible"
     }
-  }
+  };
+
+
+
 
   render() {
     return (
@@ -131,6 +132,7 @@ class App extends Component {
               <Route path='/Tiktaktoe' component={Tiktaktoe} />
               <Route path='/Grades' component={Grades} />
               <Route path='/Memorygame' component={Memorygame} />
+              <Route path='/Blackjack' component={Blackjack} />
             </Switch>
           </div>
           {/* <div className='form'>
