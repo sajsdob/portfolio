@@ -7,7 +7,7 @@ import ExperienceJson from './Experience.json';
 AOS.init({ duration: 900 });
 
 const Experience = () => {
-    const [margin, setMargin] = useState('one');
+    const [margin, setMargin] = useState('zero');
 
     const changeMargin = (e) => {
         let margin = e.target.getAttribute('value')
