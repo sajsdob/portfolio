@@ -25,11 +25,10 @@ class About extends Component {
             <div data-aos="fade-in" className="About">
                 <div>
                     <h1>HELLO, MY NAME IS</h1>
-                    <h2>Slawomir</h2>
-                    <h2 >Bialynicki - Birulo.</h2>
+                    <h2>Slawomir<br/>Bialynicki - Birulo.</h2>
                     <div data-aos="flip-right" className='line'></div>
                     <div  data-aos="fade-up">
-                        <p>I'm an aspiring front-end developer based in Poznań, POLAND. I'm specializing in building websites, web applications and everything in between.</p>
+                        <p>Front-End Developer, Father and Skateboarder based in Poznań, POLAND. I'm specializing in building websites, web applications and everything in between.</p>
                     </div>
                     <div  data-aos="fade-up" className='contact-me'>
                         <a  href='mailto: sajsdob@gmail.con'><img src={reachout} className='reachsvg'/></a>
