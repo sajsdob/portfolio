@@ -25,6 +25,8 @@ const Languages = () => {
                       <li>(<span>S</span>)CSS</li>    
                       <li>JAVASCRIPT</li>
                       <li>REACT (<span>ES6+</span>)</li>
+                      <li>BOOTSTRAP</li>
+                      <li>VUE</li>
                   </ul>
                   <ul className='soft'>
                       <p>Soft skills I possess:</p>
