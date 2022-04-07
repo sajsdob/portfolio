@@ -15,7 +15,6 @@ const Experience = () => {
         setMargin(margin)
     }
     
-    const currentDate = new Date().getFullYear()
 
 
     const currentDate = new Date().getFullYear()
