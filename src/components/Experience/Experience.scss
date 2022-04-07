@@ -3,6 +3,10 @@
     font-family: 'MyWebFont';
     src:  url('../../assets/Anton/Anton-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
   }
+
+h4,h3 {
+    text-align: left;
+}
   .skill-container {
     width: 75%;
     margin-top: 200px;

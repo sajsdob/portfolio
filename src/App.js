@@ -16,6 +16,7 @@ import Tiktaktoe from './components/Spotifyapp/Tiktaktoe.js';
 import Grades from './components/Grades/Grades.js';
 import MySkills from './components/MySkills/MySkills.js';
 import Memorygame from './components/Memorygame/Memorygame.js';
+import Metronome from './components/Metronome/Metronome.js';
 
 class App extends Component {
 
@@ -131,6 +132,7 @@ class App extends Component {
               <Route path='/Tiktaktoe' component={Tiktaktoe} />
               <Route path='/Grades' component={Grades} />
               <Route path='/Memorygame' component={Memorygame} />
+              <Route path='/Metronome' component={Metronome} />
             </Switch>
           </div>
           {/* <div className='form'>

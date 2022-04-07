@@ -15,11 +15,13 @@ const Experience = () => {
         setMargin(margin)
     }
 
+    const currentDate = new Date().getFullYear()
+
     return (
         <div className='skill-container' id='experience'>
             <h2>WHERE I'VE WORKED:</h2>
             <ul>
-                <li onClick={changeMargin} value='zero'>2021<br />{{new Date().getFullYear()}}</li>
+                <li onClick={changeMargin} value='zero'>{currentDate}<br />2020</li>
                 <li onClick={changeMargin} value='one'>2020<br />2019</li>
                 <li onClick={changeMargin} value='two'>2018<br />2016</li>
                 <li onClick={changeMargin} value='three'>2016<br />2014</li>
@@ -29,7 +31,7 @@ const Experience = () => {
             </ul>
             <div className='jobinfo'>
                 <h3>{ExperienceJson[margin].position}</h3>
-                <h4  data-aos-once='true' data-aos='slide-up'>{ExperienceJson[margin].company}</h4>
+                <h4 data-aos-once='true' data-aos='slide-up'>{ExperienceJson[margin].company}</h4>
             </div>
 
         </div>
