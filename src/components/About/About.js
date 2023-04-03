@@ -25,7 +25,7 @@ class About extends Component {
             <div data-aos="fade-in" className="About">
                 <div>
                     <h1>HELLO, MY NAME IS</h1>
-                    <h2>Slawomir<br/>Bialynicki - Birulo.</h2>
+                    <h2>Slawomir<br/>Bialynicki-Birulo.</h2>
                     <div data-aos="flip-right" className='line'></div>
                     <div  data-aos="fade-up">
                         <p>Front-End Developer, Father, Husband and Skateboarder based in Poznań, POLAND. I'm specializing in building websites, web applications and everything in between.</p>
