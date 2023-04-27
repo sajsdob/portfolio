@@ -23,7 +23,7 @@ const Experience = () => {
         <div className='skill-container' id='experience'>
             <h2>WHERE I'VE WORKED:</h2>
             <ul>
-                <li onClick={changeMargin} value='zero'>{currentDate}<br /> 2022</li>
+                <li onClick={changeMargin} value='zero'>2022<br /> {currentDate}</li>
                 <li onClick={changeMargin} value='one'>2020<br />2022</li>
                 <li onClick={changeMargin} value='two'>2019<br />2022</li>
                 <li onClick={changeMargin} value='three'>2012<br />2019</li>
