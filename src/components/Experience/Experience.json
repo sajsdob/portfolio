@@ -1,12 +1,8 @@
 {
-    "four" : {
-        "position":"Owner",
-        "company":"Skateaholic Apparel",
-        "description": "nfawnfwafnaf"
-    },
+
     "three" : {
         "position":"Social Media Manager",
-        "company":"Frosh Media Pty. Ltd.",
+        "company":"Skateground Magazine",
         "description": "nfawnfwafnaf"
     },
     "two" : {
@@ -20,7 +16,7 @@
         "description": "nfawnfwafnaf"
     },
     "zero" : {
-        "position":"Frontend Developer SAP CDC",
+        "position":"Frontend Developer",
         "company":"Transition Technologies MS",
         "description": "nfawnfwafnaf"
     }
