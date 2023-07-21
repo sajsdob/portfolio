@@ -102,6 +102,16 @@ main {
   letter-spacing: 1.2px;
 
 }
+@keyframes jiggle {
+  0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+
+#sperm {
+  animation: jiggle 1s infinite;
+
+}
 
 @media only screen and (max-width: 960px) {
   .search-box {
@@ -118,6 +128,9 @@ main {
     font-size: 90px;
     font-weight: 900;
     text-align: center;
+  }
+  #sperm {
+    width: 80vw;
   }
 }
 
@@ -163,3 +176,11 @@ h1 {
   margin-top: 60px;
 }
 
+
+.storeButton {
+  margin: 10px;
+}
+
+#price { 
+  margin-bottom: 50px;
+}

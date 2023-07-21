@@ -3,6 +3,9 @@ import './Skaterreveal.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import location from '../../assets/location.png';
+import sperm from '../../assets/icon.png';
+import play from '../../assets/play.png';
+import apple from '../../assets/apple.png';
 
 
 
@@ -22,12 +25,18 @@ function Skaterreveal() {
         <div data-aos="slide-down" className='app'>
             <h1>SKATER REVEAL GAME</h1>
             <h2>Check out a game I've created for iOS and Android:</h2>
-            <img id='skatesperm' src=''></img>
-            <h1>It's only $0.99</h1>
-            <div>
-                <div><img src=''></img></div>
-                <div><img src=''></img></div>
-            </div>
+            <img id='sperm' src={sperm} alt="Sperm" />
+            <div id="buttons">
+                 <a class="storeButton" href="https://apps.apple.com/app/skater-reveal/id6451123162" target="_blank">
+                  <img width="200" src={apple} alt="App Store"/>
+                 </a>
+          
+                 <a  class="storeButton" href="https://play.google.com/store/apps/details?id=com.sajsdob.SkaterReveal" target="_blank">
+                   <img width="200" src={play} alt="Google Play Store"/>
+                 </a>
+             </div>
+            <h1 id='price'>It's only $0.99 😉</h1>
+
         </div>
     );
 }
