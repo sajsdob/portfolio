@@ -17,6 +17,7 @@ import Grades from './components/Grades/Grades.js';
 import MySkills from './components/MySkills/MySkills.js';
 import Memorygame from './components/Memorygame/Memorygame.js';
 import Metronome from './components/Metronome/Metronome.js';
+import Skaterreveal from './components/Skaterreveal/Skaterreveal.js';
 
 class App extends Component {
 
@@ -133,6 +134,7 @@ class App extends Component {
               <Route path='/Grades' component={Grades} />
               <Route path='/Memorygame' component={Memorygame} />
               <Route path='/Metronome' component={Metronome} />
+              <Route path='/Skaterreveal' component={Skaterreveal} />
             </Switch>
           </div>
           {/* <div className='form'>
