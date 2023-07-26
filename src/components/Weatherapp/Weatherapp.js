@@ -36,33 +36,46 @@ function Weatherapp() {
         }
     }
     const localWeather = () => {
+        setWeatherinfo({})
         if ('geolocation' in navigator) {
-            setLoading(true)
-            navigator.geolocation.getCurrentPosition(position => {
-                const lat = position.coords.latitude
-                const lon = position.coords.longitude
-                fetch(`https://eu1.locationiq.com/v1/reverse.php?key=c327a65f799172&lat=${lat}&lon=${lon}&format=json`)
-                    .then(res => res.json())
-                    .then(result => {       
-                        setCity(result.address.city)
-                        return result.address.city
-                    })
-                    .then(city => {
-                        fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
-                            .then(res => res.json())
-                            .then(result => {
-                                console.log(result);
-                                setLoading(false)
-                                setWeatherinfo(result);
-                            });
-                        document.activeElement.blur();
-                    })
-            })
+            setLoading(true);
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    fetch(`https://eu1.locationiq.com/v1/reverse.php?key=c327a65f799172&lat=${lat}&lon=${lon}&format=json`)
+                        .then(res => res.json())
+                        .then(result => {       
+                            setCity(result.address.city);
+                            return result.address.city;
+                        })
+                        .then(city => {
+                            fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
+                                .then(res => res.json())
+                                .then(result => {
+                                    console.log(result);
+                                    setLoading(false);
+                                    setWeatherinfo(result);
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching weather data:', error);
+                                    setLoading(false); // Set loading to false if there's an error in fetching weather data
+                                });
+                            document.activeElement.blur();
+                        });
+                },
+                error => {
+                    console.error('Error getting geolocation:', error);
+                    alert('Unable to get your location. Please enable geolocation in your browser settings.');
+                    setLoading(false); // Set loading to false if there's an error in getting geolocation
+                }
+            );
+        } else {
+            alert('Your browser does not support geolocation!');
+            setLoading(false);
         }
-        else {
-            alert('Your browser does not support geolocation!')
-        }
-    }
+    };
+    
 
 
     const currentDate = (d) => {
@@ -102,7 +115,8 @@ function Weatherapp() {
                         <div className="weather-box">
                             <div className="temp">
                                 {Math.round(weatherinfo.main.temp)}°c
-            </div>
+                            
+                            </div>
                             <div className="weather">{weatherinfo.weather[0].main}</div>
                         </div>
                     </div>
