@@ -28,9 +28,17 @@ function Weatherapp() {
             fetch(`${api.base}weather?q=${link}&units=metric&APPID=${api.key}`)
                 .then(res => res.json())
                 .then(result => {
+                   if  (result.cod == '200') {
                     setWeatherinfo(result);
                     setLink('');
-                });
+                   }
+                   else {
+                    alert(result.message)
+                    console.log(result)
+                   }
+
+                })
+                
             //CLOSE KEYBOARD
             document.activeElement.blur();
         }

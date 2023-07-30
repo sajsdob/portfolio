@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './Skaterreveal.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import location from '../../assets/location.png';
 import sperm from '../../assets/icon.png';
 import play from '../../assets/play.png';
 import apple from '../../assets/apple.png';
+
 
 
 
