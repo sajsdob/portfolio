@@ -130,7 +130,7 @@ function Weatherapp() {
                                 {Math.round(weatherinfo.main.temp)}°c
                             </div>
                             <h2>Feels Like:  {Math.round(weatherinfo.main.feels_like)} °c</h2>
-                            <div className="weather">{weatherinfo.weather[0].main} / {weatherinfo.weather[0].description}</div>
+                            <div className="weather">{weatherinfo.weather[0].description}</div>
                         </div>
                     </div>
                 ) : ('')}
