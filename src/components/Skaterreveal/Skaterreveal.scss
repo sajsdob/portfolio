@@ -45,7 +45,7 @@ main {
     height: 30px;
     width: 30px;
     position: absolute;
-    right: -52px;
+    right: -40px;
     padding-top: 2px;
     &:hover {
       cursor: pointer;
@@ -127,6 +127,8 @@ main {
 @media only screen and (max-width: 960px) {
   .search-box {
     width: 95%;
+    position: relative;
+    right: 20px;
   }
   .storeButton {
     margin: 10px;
@@ -142,6 +144,16 @@ main {
     font-size: 90px;
     font-weight: 900;
     text-align: center;
+  }
+  #search {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    padding-top: 2px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   #sperm {
     width: 80vw;

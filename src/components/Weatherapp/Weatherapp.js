@@ -128,9 +128,9 @@ function Weatherapp() {
                         <div className="weather-box">
                             <div className="temp">
                                 {Math.round(weatherinfo.main.temp)}°c
-                            
                             </div>
-                            <div className="weather">{weatherinfo.weather[0].main}</div>
+                            <h2>Feels Like:  {Math.round(weatherinfo.main.feels_like)} °c</h2>
+                            <div className="weather">{weatherinfo.weather[0].main} / {weatherinfo.weather[0].description}</div>
                         </div>
                     </div>
                 ) : ('')}
@@ -143,6 +143,5 @@ function Weatherapp() {
 }
 
 export default Weatherapp;
-
 
 
