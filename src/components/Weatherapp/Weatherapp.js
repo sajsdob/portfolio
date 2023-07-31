@@ -3,6 +3,7 @@ import './Weatherapp.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import location from '../../assets/location.png';
+import search from '../../assets/loop.png';
 
 
 
@@ -24,7 +25,7 @@ function Weatherapp() {
 
     
     const searchCity = evt => {
-        if (evt.key === "Enter") {
+        if (evt.key === "Enter"  || evt.target.alt == 'serachicon') {
             fetch(`${api.base}weather?q=${link}&units=metric&APPID=${api.key}`)
                 .then(res => res.json())
                 .then(result => {
@@ -111,7 +112,9 @@ function Weatherapp() {
                         value={link}
                         onKeyPress={searchCity}
                     />
-                    <img alt='localweatherlogo' onClick={localWeather} src={location} />
+                    <img id="location" alt='localweatherlogo' onClick={localWeather} src={location} />
+                    <img id="search" alt='serachicon' onClick={searchCity} src={search} />
+
                 </div>
 
                 {(typeof weatherinfo.main != "undefined") ? (
