@@ -37,7 +37,7 @@ function Skaterreveal() {
                    <img  class="storeButton"   img width="200" src={play} alt="Google Play Store"/>
                  </a>
              </div>
-            <h1 id='price'>It's only $0.99 😉</h1>
+            <h1 id='price'>Feel free to download 😉</h1>
 
         </div>
     );
